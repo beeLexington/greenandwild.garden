@@ -1,0 +1,66 @@
+:root {
+	--colour-pink: 235, 198, 195;
+	--colour-purple: 170, 150, 179;
+	--colour-green: 193, 207, 193;
+	--colour-black: 34, 34, 34;
+	--colour-white: 221, 221, 221;
+
+	--colour-accent: var(--colour-green);
+
+	--body-font-family: "Lexend", sans-serif;
+	--body-font-optical-sizing: auto;
+	--body-font-weight: 400;
+	--body-font-style: normal;
+	--body-line-height: 1.15;
+
+	--heading-font-family: "Lexend", sans-serif;
+	--heading-font-optical-sizing: auto;
+	--heading-font-weight: 600;
+	--heading-font-style: normal;
+	--heading-line-height: 1.5;
+}
+
+html {
+	background-color: rgb(var(--colour-white));
+	color: rgb(var(--colour-black));
+}
+
+body {
+	font-family: var(--body-font-family);
+	font-optical-sizing: var(--body-font-optical-sizing);
+	font-weight: var(--body-font-weight);
+	font-style: var(--body-font-style);
+	line-height: var(--body-line-height);
+	font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--heading-font-family);
+	font-optical-sizing: var(--heading-font-optical-sizing);
+	font-weight: var(--heading-font-weight);
+	font-style: var(--heading-font-style);
+	line-height: var(--heading-line-height);
+}
+
+a {
+	color: inherit;
+	text-decoration-thickness: 0.05em;
+}
+
+a:active {
+	opacity: 0.8;
+}
+
+a:focus,
+a:hover {
+	text-decoration-thickness: 0.2em;
+}
+
+a:focus {
+	outline: none;
+}
