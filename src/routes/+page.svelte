@@ -1,13 +1,10 @@
-<h1>Green and Wild</h1>
-<h2>Low impact gardening</h2>
+<script>
+    import Header from "$lib/header.svelte";
+</script>
 
-<nav> 
-    <ul>
-        <li><a href="/about">about</a></li>
-        <li><a href="/services">services</a></li>
-        <li><a href="/contact">contact</a></li>
-    </ul>
-</nav>
+<Header />
+
+<h1>Low impact gardening</h1>
 
 <p>
     Nulla anim esse sit cupidatat ullamco nisi aute. Eiusmod elit non pariatur
