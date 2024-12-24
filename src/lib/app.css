@@ -15,7 +15,7 @@
 
 	--heading-font-family: "Lexend", sans-serif;
 	--heading-font-optical-sizing: auto;
-	--heading-font-weight: 600;
+	--heading-font-weight: 400;
 	--heading-font-style: normal;
 	--heading-line-height: 1.5;
 }
@@ -32,17 +32,6 @@ body {
 	font-style: var(--body-font-style);
 	line-height: var(--body-line-height);
 	font-size: 18px;
-}
-
-body > div {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	column-gap: 0.5em;
-}
-
-body > div > * {
-	grid-column-start: 1;
-	grid-column-end: 13;
 }
 
 h1,
@@ -79,4 +68,8 @@ a:hover {
 
 a:focus {
 	outline: none;
+}
+
+img {
+	max-width: 100%;
 }

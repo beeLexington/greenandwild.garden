@@ -1,50 +1,224 @@
 <script>
     import Header from "$lib/header.svelte";
+    import portrait from "$lib/assets/portrait.jpg";
+    import gardenCloseup from "$lib/assets/garden-closeup.jpg";
+    import meadowGrass from "$lib/assets/meadow-grass.jpg";
+    import sky from "$lib/assets/sky.jpg";
+    import flowerBee from "$lib/assets/flower-bee.jpg";
 </script>
 
 <Header />
 
-<h1>Low impact gardening</h1>
+<section id="who">
+    <h2>I am a queer trans non binary <span>gardener</span>...</h2>
 
-<p>
-    Nulla anim esse sit cupidatat ullamco nisi aute. Eiusmod elit non pariatur
-    deserunt laboris minim anim deserunt pariatur incididunt excepteur proident
-    ad fugiat. Occaecat amet quis incididunt ea qui aliqua pariatur duis minim
-    mollit. Labore qui nisi officia incididunt mollit pariatur cillum anim
-    deserunt. Adipisicing irure enim dolor sit esse qui in est veniam excepteur
-    aliqua incididunt do irure. Fugiat tempor quis magna consectetur laborum
-    irure ipsum velit. In commodo incididunt adipisicing tempor ut excepteur sit
-    nostrud consequat ipsum consectetur ipsum cillum et.
-</p>
+    <div class="img-patch">
+        <!-- add in alt descritpion - describe the different plants with in the image -->
+        <img src={gardenCloseup} />
+        <img
+            alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
+            src={portrait}
+        />
+    </div>
 
-<p>
-    Nostrud non eiusmod cillum quis. Eiusmod velit occaecat aliquip ad excepteur
-    voluptate. Minim consequat laborum occaecat elit nulla enim.
-</p>
+    <div class="text-patch">
+        <p>
+            ...working in the Hertfordshire area with an RHS Level 2 Certificate
+            in Practical Horticulture.
+        </p>
 
-<p>
-    Dolor adipisicing occaecat nisi Lorem nulla est labore cupidatat. Sit ut do
-    reprehenderit ex deserunt quis ex ut ullamco. Irure ea culpa laborum
-    excepteur exercitation anim nisi enim fugiat irure ex dolor qui culpa. Id
-    aute fugiat do occaecat non incididunt. Aute voluptate labore velit anim in
-    labore eu officia laboris.
-</p>
+        <p>
+            I have a particular focus on low impact gardening which is a natural
+            approach for me. I came into gardening through my concern over the
+            climate crisis so I have always centered environmental issues in my
+            gardening practices.
+        </p>
 
-<p>
-    Laborum est nostrud commodo do sint adipisicing culpa quis pariatur.
-    Consectetur excepteur veniam velit elit esse ipsum. Aliquip eiusmod est
-    dolor aliqua culpa id culpa amet ea excepteur veniam ut. In proident et ex
-    velit amet excepteur dolore. Cillum tempor excepteur incididunt sint. Mollit
-    id ex esse ad enim officia ex.
-</p>
+        <p>
+            I've done lots of jobs in my life, including working as a software
+            developer, and I am interested in how technology can make gardening
+            more accessible, more affordable and more inclusive. I want a world
+            where anybody can have a garden where they feel comfortable.
+        </p>
+    </div>
+</section>
 
-<p>
-    Laborum dolor reprehenderit ex sunt. Culpa sunt excepteur quis incididunt
-    ullamco velit fugiat in do exercitation exercitation ut irure consequat.
-    Mollit eiusmod cillum mollit sint eu cillum irure deserunt exercitation
-    irure ea sunt cupidatat sint. Qui ut nisi culpa proident nisi proident.
-    Laborum velit occaecat laborum sunt reprehenderit culpa ullamco velit irure.
-    Anim elit exercitation laboris magna consequat voluptate fugiat pariatur
-    deserunt. Ad consequat eu officia duis reprehenderit nostrud duis labore
-    aliquip excepteur.
-</p>
+<section id="services">
+    <h2>I offer a variety of garden maintenance <span>services</span></h2>
+
+    <div class="text-patch left">
+        <ul>
+            <li>Maintaining existing plants and beds</li>
+            <li>Specialised shrub pruning</li>
+            <li>Looking after compost bins</li>
+            <li>Vegetable tending</li>
+            <li>Scything small meadow areas</li>
+        </ul>
+
+        <p>
+            If you are not sure if I can do something, contact me and I am happy
+            to help.
+        </p>
+    </div>
+</section>
+
+<section class="break-section">
+    <img src={meadowGrass} display="presentation" alt="" />
+</section>
+
+<section id="how">
+    <h2>Key areas I try to consider when <span>gardening</span></h2>
+
+    <div class="text-patch right">
+        <ul>
+            <li>Noise pollution</li>
+            <li>local air pollution</li>
+            <li>soil disturbance</li>
+            <li>local wildlife</li>
+            <li>the materials brought into the garden</li>
+            <li>the materials removed from the garden</li>
+            <li>carbon emissions</li>
+        </ul>
+    </div>
+
+    <h2>In practice this looks like</h2>
+
+    <div class="img-patch">
+        <img src={sky} />
+        <img src={flowerBee} />
+    </div>
+
+    <div class="text-patch left">
+        <ul>
+            <li>Using organic and vegan practices</li>
+            <li>
+                Use hand tools over power tools to reduce noise and carbon
+                emissions
+            </li>
+            <li>
+                Use circular practices and reduce waste that needs to be removed
+                from the garden
+            </li>
+            <li>
+                Utilise resources provided naturally, such as rain water
+                harvesting, home made compost
+            </li>
+            <li>
+                Reduce the amount of soil disturbance within the garden by
+                incorporating no dig practices
+            </li>
+            <li>
+                Source local and sustainable plants and planting materials to
+                reduce environmental impact and support other local businesses
+            </li>
+            <li>
+                Understand the needs of local wildlife to ensure that I have
+                minimal impact on them
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    section {
+        padding-block: 6rem;
+        display: grid;
+        grid-template-columns: 1rem auto 1rem;
+    }
+
+    section :global(:first-child) {
+        margin-block-start: 0;
+    }
+
+    section :global(:last-child) {
+        margin-block-end: 0;
+    }
+
+    h2 {
+        font-size: 5rem;
+        margin-block-end: 0;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    h2 > span {
+        font-style: italic;
+    }
+
+    .img-patch {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        display: grid;
+        grid-template-columns: 2rem repeat(22, 1fr) 2rem;
+        grid-template-rows: 1fr auto 1fr;
+        column-gap: 0.5em;
+
+        margin-block-end: 6rem;
+    }
+
+    #who .img-patch > img:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #who .img-patch > img:nth-child(2) {
+        grid-column-start: 13;
+        grid-column-end: 16;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .break-section > img {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        max-height: 50vh;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #how .img-patch > img:nth-child(1) {
+        grid-column-start: 15;
+        grid-column-end: 25;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    #how .img-patch > img:nth-child(2) {
+        grid-column-start: 10;
+        grid-column-end: 13;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .text-patch {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        display: grid;
+        grid-template-columns: 2rem repeat(22, 1fr) 2rem;
+        column-gap: 0.5em;
+    }
+
+    #who .text-patch > * {
+        grid-column-start: 9;
+        grid-column-end: 17;
+    }
+
+    #services .text-patch.left > * {
+        grid-column-start: 2;
+        grid-column-end: 10;
+    }
+
+    #how .text-patch.right > * {
+        grid-column-start: 16;
+        grid-column-end: 24;
+    }
+
+    #how .text-patch.left > * {
+        grid-column-start: 2;
+        grid-column-end: 10;
+    }
+</style>

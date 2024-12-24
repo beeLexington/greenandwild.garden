@@ -4,6 +4,7 @@
 
 <header>
     <Logo />
+    <span>Affordable low impact gardening</span>
 </header>
 
 <style>
