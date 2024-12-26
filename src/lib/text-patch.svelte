@@ -8,17 +8,14 @@
 
 <style>
     div.left {
-        grid-column-start: 2;
-        grid-column-end: 10;
+        grid-column: 2 / 10;
     }
 
     div.center {
-        grid-column-start: 9;
-        grid-column-end: 17;
+        grid-column: 9 / 17;
     }
 
     div.right {
-        grid-column-start: 16;
-        grid-column-end: 24;
+        grid-column: 16 / 24;
     }
 </style>

@@ -137,8 +137,7 @@
     h2 {
         font-size: 5rem;
         margin-block-end: 0;
-        grid-column-start: 2;
-        grid-column-end: 24;
+        grid-column: 2 / 24;
     }
 
     h2 > span {
@@ -146,42 +145,33 @@
     }
 
     .img-patch {
-        grid-column-start: 1;
-        grid-column-end: 25;
+        grid-column: 1 / 25;
 
         display: grid;
-        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
         grid-template-rows: 1fr auto 1fr;
+        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
         column-gap: 0.5em;
 
         margin-block-end: 6rem;
     }
 
     #who .img-patch > img:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row: 1 / 4;
+        grid-column: 1 / 11;
     }
 
     #who .img-patch > img:nth-child(2) {
-        grid-column-start: 13;
-        grid-column-end: 16;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row: 2 / 3;
+        grid-column: 13 / 16;
     }
 
     #how .img-patch > img:nth-child(1) {
-        grid-column-start: 15;
-        grid-column-end: 25;
-        grid-row-start: 1;
-        grid-row-end: 4;
+        grid-row: 1 / 4;
+        grid-column: 15 / 25;
     }
 
     #how .img-patch > img:nth-child(2) {
-        grid-column-start: 10;
-        grid-column-end: 13;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row: 2 / 3;
+        grid-column: 10 / 13;
     }
 </style>
