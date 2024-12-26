@@ -22,6 +22,10 @@
 	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%)
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	background-color: rgb(var(--colour-white));
 	color: rgb(var(--colour-black));

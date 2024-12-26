@@ -6,6 +6,7 @@
 
 <style>
     h1 {
+        margin-block: 0;
         line-height: 1;
         font-size: 2.5rem;
         display: flex;
