@@ -1,8 +1,9 @@
 <script>
+    export let id = undefined;
     export let position = "center";
 </script>
 
-<div class={position}>
+<div {id} class={position}>
     <slot />
 </div>
 

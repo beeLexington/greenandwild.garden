@@ -30,10 +30,10 @@
         </p>
 
         <p>
-            I have a particular focus on low impact gardening which is a natural
-            approach for me. I came into gardening through my concern over the
-            climate crisis so I have always centred environmental issues in my
-            gardening practices.
+            I have a particular focus on <a href="how">low impact gardening</a>
+            which is a natural approach for me. I came into gardening through my
+            concern over the climate crisis so I have always centred
+            environmental issues in my gardening practices.
         </p>
 
         <p>
@@ -44,6 +44,8 @@
         </p>
     </TextPatch>
 </section>
+
+<BreakSection src={meadowGrass} />
 
 <section id="what">
     <h2>I provide garden maintenance <span>services</span></h2>
@@ -67,60 +69,65 @@
     </TextPatch>
 </section>
 
-<BreakSection src={meadowGrass} />
-
 <section id="how">
-    <h2>Key areas I try to consider when <span>gardening</span></h2>
-
-    <TextPatch position="right">
-        <ul>
-            <li>Noise pollution</li>
-            <li>local air pollution</li>
-            <li>soil disturbance</li>
-            <li>local wildlife</li>
-            <li>the materials brought into the garden</li>
-            <li>the materials removed from the garden</li>
-            <li>carbon emissions</li>
-        </ul>
-    </TextPatch>
-
-    <h2>In practice this looks like</h2>
+    <h2>Low impact gardening in <span>practice</span></h2>
 
     <div class="img-patch">
         <img src={sky} />
         <img src={flowerBee} />
     </div>
 
-    <TextPatch position="left">
-        <ul>
-            <li>Use organic and vegan practices</li>
+    <TextPatch id="how-issues" position="center-wide">
+        <p>
+            Gardening can have a wide impact on the local environment. Low
+            impact gardening is about reducing that impact.
+        </p>
+        
+        <p>When working in a garden, I consider:</p>
+
+        <ul class="text-cloud">
+            <li>Noise pollution</li>
+            <li>Local air pollution</li>
+            <li>Soil disturbance</li>
+            <li>Local wildlife</li>
+            <li>Waste</li>
+            <li>Carbon emissions</li>
+        </ul>
+    </TextPatch>
+
+    <TextPatch id="how-practices" position="center-wide">
+        <p>I do this by:</p>
+
+        <ul class="text-cloud">
+            <li>Using organic and vegan practices</li>
             <li>
-                Use hand tools over power tools to reduce noise and carbon
-                emissions
+                Using hand tools over power tools to reduce noise pollution, air
+                pollution, and carbon emissions
             </li>
             <li>
-                Use circular practices and reduce waste that needs to be removed
+                Using circular practices to reuse waste instead of removing it
                 from the garden
             </li>
             <li>
-                Utilise resources provided naturally, such as rain water
-                harvesting, home made compost
+                Making use of naturally provided resources such as harvested
+                rain water and home made compost
             </li>
             <li>
-                Reduce the amount of soil disturbance within the garden by
-                incorporating no dig practices
+                Incorporating no dig practices to reduce soil disturbance
             </li>
             <li>
-                Source local and sustainable plants and planting materials to
+                Sourcing local and sustainable plants and planting materials to
                 reduce environmental impact and support other local businesses
             </li>
             <li>
-                Understand the needs of local wildlife to ensure that I have
+                Understanding the needs of local wildlife to make sure I have
                 minimal impact on them
             </li>
         </ul>
     </TextPatch>
 </section>
+
+<BreakSection src={meadowGrass} />
 
 <style>
     section {
@@ -215,5 +222,57 @@
     #how .img-patch > img:nth-child(2) {
         grid-row: 2 / 3;
         grid-column: 10 / 13;
+    }
+
+    :global(#how-issues) ul.text-cloud > li:nth-child(1) {
+        grid-column: 2 / 13;
+    }
+
+    :global(#how-issues) ul.text-cloud > li:nth-child(2) {
+        grid-column: 13 / 24;
+    }
+
+    :global(#how-issues) ul.text-cloud > li:nth-child(3) {
+        grid-column: 7 / 24;
+    }
+
+    :global(#how-issues) ul.text-cloud > li:nth-child(4) {
+        grid-column: 6 / 24;
+    }
+
+    :global(#how-issues) ul.text-cloud > li:nth-child(5) {
+        grid-column: 4 / 11;
+    }
+
+    :global(#how-issues) ul.text-cloud > li:nth-child(6) {
+        grid-column: 11 / 24;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(1) {
+        grid-column: 2 / 14;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(2) {
+        grid-column: 6 / 18;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(3) {
+        grid-column: 3 / 15;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(4) {
+        grid-column: 12 / 24;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(5) {
+        grid-column: 2 / 14;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(6) {
+        grid-column: 10 / 22;
+    }
+
+    :global(#how-practices) ul.text-cloud > li:nth-child(7) {
+        grid-column: 7 / 19;
     }
 </style>
