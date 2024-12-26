@@ -28,6 +28,8 @@ html {
 }
 
 body {
+	overscroll-behavior: none;
+
 	font-family: var(--body-font-family);
 	font-optical-sizing: var(--body-font-optical-sizing);
 	font-weight: var(--body-font-weight);
