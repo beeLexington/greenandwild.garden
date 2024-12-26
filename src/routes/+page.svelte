@@ -1,19 +1,19 @@
 <script>
-    import Header from "$lib/header.svelte";
-    import portrait from "$lib/assets/portrait.jpg";
+    import flowerBee from "$lib/assets/flower-bee.jpg";
     import gardenCloseup from "$lib/assets/garden-closeup.jpg";
     import meadowGrass from "$lib/assets/meadow-grass.jpg";
+    import portrait from "$lib/assets/portrait.jpg";
     import sky from "$lib/assets/sky.jpg";
-    import flowerBee from "$lib/assets/flower-bee.jpg";
+    import Header from "$lib/header.svelte";
 </script>
 
 <Header />
 
 <section id="who">
-    <h2>I am a queer trans non binary <span>gardener</span>...</h2>
+    <h2>I'm a queer trans non binary <span>gardener</span>...</h2>
 
     <div class="img-patch">
-        <!-- add in alt descritpion - describe the different plants with in the image -->
+        <!-- add in alt description - describe the different plants in the image -->
         <img src={gardenCloseup} />
         <img
             alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
@@ -30,7 +30,7 @@
         <p>
             I have a particular focus on low impact gardening which is a natural
             approach for me. I came into gardening through my concern over the
-            climate crisis so I have always centered environmental issues in my
+            climate crisis so I have always centred environmental issues in my
             gardening practices.
         </p>
 
@@ -57,7 +57,7 @@
 
         <p>
             If you are not sure if I can do something, contact me and I am happy
-            to help.
+            to answer any questions.
         </p>
     </div>
 </section>
@@ -90,7 +90,7 @@
 
     <div class="text-patch left">
         <ul>
-            <li>Using organic and vegan practices</li>
+            <li>Use organic and vegan practices</li>
             <li>
                 Use hand tools over power tools to reduce noise and carbon
                 emissions
@@ -202,23 +202,18 @@
         column-gap: 0.5em;
     }
 
-    #who .text-patch > * {
+    .text-patch > * {
         grid-column-start: 9;
         grid-column-end: 17;
     }
 
-    #services .text-patch.left > * {
+    .text-patch.left > * {
         grid-column-start: 2;
         grid-column-end: 10;
     }
 
-    #how .text-patch.right > * {
+    .text-patch.right > * {
         grid-column-start: 16;
         grid-column-end: 24;
-    }
-
-    #how .text-patch.left > * {
-        grid-column-start: 2;
-        grid-column-end: 10;
     }
 </style>
