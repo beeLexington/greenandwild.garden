@@ -4,6 +4,7 @@
     import meadowGrass from "$lib/assets/meadow-grass.jpg";
     import portrait from "$lib/assets/portrait.jpg";
     import sky from "$lib/assets/sky.jpg";
+    import BreakSection from "$lib/break-section.svelte";
     import Header from "$lib/header.svelte";
 </script>
 
@@ -62,9 +63,7 @@
     </div>
 </section>
 
-<section class="break-section">
-    <img src={meadowGrass} display="presentation" alt="" />
-</section>
+<BreakSection src={meadowGrass} />
 
 <section id="how">
     <h2>Key areas I try to consider when <span>gardening</span></h2>
@@ -169,14 +168,6 @@
         grid-column-end: 16;
         grid-row-start: 2;
         grid-row-end: 3;
-    }
-
-    .break-section > img {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        max-height: 50vh;
-        object-fit: cover;
-        width: 100%;
     }
 
     #how .img-patch > img:nth-child(1) {
