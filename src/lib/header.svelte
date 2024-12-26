@@ -6,7 +6,7 @@
 <header style="--background-image-src: url({meadowGrass});">
     <div>
         <Logo />
-        <span>Affordable low impact gardening</span>
+        <div><span>Affordable low impact gardening</span></div>
     </div>
 </header>
 
@@ -33,8 +33,8 @@
     header > div > :global(:first-child),
     header > div > :last-child {
         animation-fill-mode: both;
-        animation-delay: 0.5s;
-        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-duration: 2s;
         animation-timing-function: ease-in-out;
     }
 
@@ -97,6 +97,21 @@
             transform: translate(0, -50%);
         }
     }
+    
+    header > div > :last-child > span {
+        animation-name: fade-in;
+        animation-fill-mode: both;
+        animation-delay: 3s;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @media (prefers-reduced-motion) {
+        header > div > :last-child > span {
+            animation-name: unset;
+            opacity: 1;
+        }
+    }
 
     @supports (animation-timeline: scroll()) and (animation-range: cover) {
         header {
@@ -128,6 +143,16 @@
 
         to {
             height: 7rem;
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
         }
     }
 
