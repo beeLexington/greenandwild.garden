@@ -6,6 +6,7 @@
     import sky from "$lib/assets/sky.jpg";
     import BreakSection from "$lib/break-section.svelte";
     import Header from "$lib/header.svelte";
+    import TextPatch from "$lib/text-patch.svelte";
 </script>
 
 <Header />
@@ -22,7 +23,7 @@
         />
     </div>
 
-    <div class="text-patch">
+    <TextPatch>
         <p>
             ...working in the Hertfordshire area with an RHS Level 2 Certificate
             in Practical Horticulture.
@@ -41,13 +42,13 @@
             more accessible, more affordable and more inclusive. I want a world
             where anybody can have a garden where they feel comfortable.
         </p>
-    </div>
+    </TextPatch>
 </section>
 
 <section id="services">
     <h2>I offer a variety of garden maintenance <span>services</span></h2>
 
-    <div class="text-patch left">
+    <TextPatch position="left">
         <ul>
             <li>Maintaining existing plants and beds</li>
             <li>Specialised shrub pruning</li>
@@ -60,7 +61,7 @@
             If you are not sure if I can do something, contact me and I am happy
             to answer any questions.
         </p>
-    </div>
+    </TextPatch>
 </section>
 
 <BreakSection src={meadowGrass} />
@@ -68,7 +69,7 @@
 <section id="how">
     <h2>Key areas I try to consider when <span>gardening</span></h2>
 
-    <div class="text-patch right">
+    <TextPatch position="right">
         <ul>
             <li>Noise pollution</li>
             <li>local air pollution</li>
@@ -78,7 +79,7 @@
             <li>the materials removed from the garden</li>
             <li>carbon emissions</li>
         </ul>
-    </div>
+    </TextPatch>
 
     <h2>In practice this looks like</h2>
 
@@ -87,7 +88,7 @@
         <img src={flowerBee} />
     </div>
 
-    <div class="text-patch left">
+    <TextPatch position="left">
         <ul>
             <li>Use organic and vegan practices</li>
             <li>
@@ -115,14 +116,14 @@
                 minimal impact on them
             </li>
         </ul>
-    </div>
+    </TextPatch>
 </section>
 
 <style>
     section {
         padding-block: 6rem;
         display: grid;
-        grid-template-columns: 1rem auto 1rem;
+        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
     }
 
     section :global(:first-child) {
@@ -137,7 +138,7 @@
         font-size: 5rem;
         margin-block-end: 0;
         grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-end: 24;
     }
 
     h2 > span {
@@ -146,7 +147,7 @@
 
     .img-patch {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 25;
 
         display: grid;
         grid-template-columns: 1rem repeat(22, 1fr) 1rem;
@@ -182,29 +183,5 @@
         grid-column-end: 13;
         grid-row-start: 2;
         grid-row-end: 3;
-    }
-
-    .text-patch {
-        grid-column-start: 1;
-        grid-column-end: 4;
-
-        display: grid;
-        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
-        column-gap: 0.5em;
-    }
-
-    .text-patch > * {
-        grid-column-start: 9;
-        grid-column-end: 17;
-    }
-
-    .text-patch.left > * {
-        grid-column-start: 2;
-        grid-column-end: 10;
-    }
-
-    .text-patch.right > * {
-        grid-column-start: 16;
-        grid-column-end: 24;
     }
 </style>
