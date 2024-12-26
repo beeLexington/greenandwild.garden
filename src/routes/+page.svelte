@@ -6,6 +6,7 @@
     import sky from "$lib/assets/sky.jpg";
     import BreakSection from "$lib/break-section.svelte";
     import Header from "$lib/header.svelte";
+    import ListCloud from "$lib/list-cloud.svelte";
     import TextPatch from "$lib/text-patch.svelte";
 </script>
 
@@ -53,13 +54,15 @@
     <TextPatch position="left-wide">
         <p>Some examples of things I do include:</p>
 
-        <ul class="text-cloud">
-            <li>Maintaining existing plants and beds</li>
-            <li>Specialised shrub pruning</li>
-            <li>Looking after compost bins</li>
-            <li>Vegetable tending</li>
-            <li>Scything small meadow areas</li>
-        </ul>
+        <ListCloud>
+            <li style="--grid-column: 2 / 24;">
+                Maintaining existing plants and beds
+            </li>
+            <li style="--grid-column: 11 / 24;">Specialised shrub pruning</li>
+            <li style="--grid-column: 4 / 24;">Looking after compost bins</li>
+            <li style="--grid-column: 8 / 24;">Vegetable tending</li>
+            <li style="--grid-column: 2 / 24;">Scything small meadow areas</li>
+        </ListCloud>
 
         <p>
             If you have a job to do in your garden and you're not sure if I'm
@@ -85,45 +88,47 @@
         
         <p>When working in a garden, I consider:</p>
 
-        <ul class="text-cloud">
-            <li>Noise pollution</li>
-            <li>Local air pollution</li>
-            <li>Soil disturbance</li>
-            <li>Local wildlife</li>
-            <li>Waste</li>
-            <li>Carbon emissions</li>
-        </ul>
+        <ListCloud>
+            <li style="--grid-column: 2 / 13;">Noise pollution</li>
+            <li style="--grid-column: 13 / 24;">Local air pollution</li>
+            <li style="--grid-column: 7 / 24;">Soil disturbance</li>
+            <li style="--grid-column: 6 / 24;">Local wildlife</li>
+            <li style="--grid-column: 4 / 11;">Waste</li>
+            <li style="--grid-column: 11 / 24;">Carbon emissions</li>
+        </ListCloud>
     </TextPatch>
 
     <TextPatch id="how-practices" position="center-wide">
         <p>I do this by:</p>
 
-        <ul class="text-cloud">
-            <li>Using organic and vegan practices</li>
-            <li>
+        <ListCloud>
+            <li style="--grid-column: 2 / 14;">
+                Using organic and vegan practices
+            </li>
+            <li style="--grid-column: 6 / 18;">
                 Using hand tools over power tools to reduce noise pollution, air
                 pollution, and carbon emissions
             </li>
-            <li>
+            <li style="--grid-column: 3 / 15;">
                 Using circular practices to reuse waste instead of removing it
                 from the garden
             </li>
-            <li>
+            <li style="--grid-column: 12 / 24;">
                 Making use of naturally provided resources such as harvested
                 rain water and home made compost
             </li>
-            <li>
+            <li style="--grid-column: 2 / 14;">
                 Incorporating no dig practices to reduce soil disturbance
             </li>
-            <li>
+            <li style="--grid-column: 10 / 22;">
                 Sourcing local and sustainable plants and planting materials to
                 reduce environmental impact and support other local businesses
             </li>
-            <li>
+            <li style="--grid-column: 7 / 19;">
                 Understanding the needs of local wildlife to make sure I have
                 minimal impact on them
             </li>
-        </ul>
+        </ListCloud>
     </TextPatch>
 </section>
 
@@ -173,17 +178,6 @@
         display: block;
     }
 
-    ul.text-cloud {
-        margin-block: 1.5em;
-        padding-inline-start: 0;
-
-        list-style-type: none;
-
-        display: grid;
-        grid-template-columns: 3rem repeat(22, 1fr) 3rem;
-        row-gap: 1em;
-    }
-
     #who .img-patch > img:nth-child(1) {
         grid-row: 1 / 4;
         grid-column: 1 / 11;
@@ -194,26 +188,6 @@
         grid-column: 13 / 16;
     }
 
-    #what ul.text-cloud > li:nth-child(1) {
-        grid-column: 2 / 24;
-    }
-
-    #what ul.text-cloud > li:nth-child(2) {
-        grid-column: 11 / 24;
-    }
-
-    #what ul.text-cloud > li:nth-child(3) {
-        grid-column: 4 / 24;
-    }
-
-    #what ul.text-cloud > li:nth-child(4) {
-        grid-column: 8 / 24;
-    }
-
-    #what ul.text-cloud > li:nth-child(5) {
-        grid-column: 2 / 24;
-    }
-
     #how .img-patch > img:nth-child(1) {
         grid-row: 1 / 4;
         grid-column: 15 / 25;
@@ -222,57 +196,5 @@
     #how .img-patch > img:nth-child(2) {
         grid-row: 2 / 3;
         grid-column: 10 / 13;
-    }
-
-    :global(#how-issues) ul.text-cloud > li:nth-child(1) {
-        grid-column: 2 / 13;
-    }
-
-    :global(#how-issues) ul.text-cloud > li:nth-child(2) {
-        grid-column: 13 / 24;
-    }
-
-    :global(#how-issues) ul.text-cloud > li:nth-child(3) {
-        grid-column: 7 / 24;
-    }
-
-    :global(#how-issues) ul.text-cloud > li:nth-child(4) {
-        grid-column: 6 / 24;
-    }
-
-    :global(#how-issues) ul.text-cloud > li:nth-child(5) {
-        grid-column: 4 / 11;
-    }
-
-    :global(#how-issues) ul.text-cloud > li:nth-child(6) {
-        grid-column: 11 / 24;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(1) {
-        grid-column: 2 / 14;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(2) {
-        grid-column: 6 / 18;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(3) {
-        grid-column: 3 / 15;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(4) {
-        grid-column: 12 / 24;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(5) {
-        grid-column: 2 / 14;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(6) {
-        grid-column: 10 / 22;
-    }
-
-    :global(#how-practices) ul.text-cloud > li:nth-child(7) {
-        grid-column: 7 / 19;
     }
 </style>
