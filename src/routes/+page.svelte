@@ -6,6 +6,7 @@
     import sky from "$lib/assets/sky.jpg";
     import BreakSection from "$lib/break-section.svelte";
     import Header from "$lib/header.svelte";
+    import ImagePatch from "$lib/image-patch.svelte";
     import ListCloud from "$lib/list-cloud.svelte";
     import TextPatch from "$lib/text-patch.svelte";
 </script>
@@ -15,14 +16,18 @@
 <section id="who">
     <h2>I'm a queer trans non binary <span>gardener</span>...</h2>
 
-    <div class="img-patch">
+    <ImagePatch>
         <!-- add in alt description - describe the different plants in the image -->
-        <img src={gardenCloseup} />
+        <img
+            src={gardenCloseup}
+            style="--grid-row: 1 / 4; --grid-column: 1 / 11;"
+        />
         <img
             alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
             src={portrait}
+            style="--grid-row: 2 / 3; grid-column: 13 / 16;"
         />
-    </div>
+    </ImagePatch>
 
     <TextPatch>
         <p>
@@ -75,17 +80,17 @@
 <section id="how">
     <h2>Low impact gardening in <span>practice</span></h2>
 
-    <div class="img-patch">
-        <img src={sky} />
-        <img src={flowerBee} />
-    </div>
+    <ImagePatch>
+        <img src={sky} style="--grid-row: 1 / 4; --grid-column: 15 / 25;" />
+        <img src={flowerBee} style="--grid-row: 2 / 3; grid-column: 10 / 13;" />
+    </ImagePatch>
 
     <TextPatch id="how-issues" position="center-wide">
         <p>
-            Gardening can have a wide impact on the local environment. Low
-            impact gardening is about reducing that impact.
+            Gardening can have a wide impact on the local environment. Low impact
+            gardening is about reducing that impact.
         </p>
-        
+
         <p>When working in a garden, I consider:</p>
 
         <ListCloud>
@@ -161,40 +166,5 @@
 
     h2 > span {
         font-style: italic;
-    }
-
-    .img-patch {
-        grid-column: 1 / 25;
-
-        display: grid;
-        grid-template-rows: 1fr auto 1fr;
-        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
-        column-gap: 0.5em;
-
-        margin-block-end: 6rem;
-    }
-
-    .img-patch > img {
-        display: block;
-    }
-
-    #who .img-patch > img:nth-child(1) {
-        grid-row: 1 / 4;
-        grid-column: 1 / 11;
-    }
-
-    #who .img-patch > img:nth-child(2) {
-        grid-row: 2 / 3;
-        grid-column: 13 / 16;
-    }
-
-    #how .img-patch > img:nth-child(1) {
-        grid-row: 1 / 4;
-        grid-column: 15 / 25;
-    }
-
-    #how .img-patch > img:nth-child(2) {
-        grid-row: 2 / 3;
-        grid-column: 10 / 13;
     }
 </style>
