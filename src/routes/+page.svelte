@@ -45,11 +45,13 @@
     </TextPatch>
 </section>
 
-<section id="services">
-    <h2>I offer a variety of garden maintenance <span>services</span></h2>
+<section id="what">
+    <h2>I provide garden maintenance <span>services</span></h2>
 
-    <TextPatch position="left">
-        <ul>
+    <TextPatch position="left-wide">
+        <p>Some examples of things I do include:</p>
+
+        <ul class="text-cloud">
             <li>Maintaining existing plants and beds</li>
             <li>Specialised shrub pruning</li>
             <li>Looking after compost bins</li>
@@ -58,8 +60,9 @@
         </ul>
 
         <p>
-            If you are not sure if I can do something, contact me and I am happy
-            to answer any questions.
+            If you have a job to do in your garden and you're not sure if I'm
+            the right person for you, <a href="#contact">contact me</a> and I'm
+            always happy to answer any questions.
         </p>
     </TextPatch>
 </section>
@@ -126,11 +129,15 @@
         grid-template-columns: 1rem repeat(22, 1fr) 1rem;
     }
 
-    section :global(:first-child) {
+    section > :global(*) {
+        grid-column: 2 / 24;
+    }
+
+    section > :global(:first-child) {
         margin-block-start: 0;
     }
 
-    section :global(:last-child) {
+    section > :global(:last-child) {
         margin-block-end: 0;
     }
 
@@ -155,6 +162,21 @@
         margin-block-end: 6rem;
     }
 
+    .img-patch > img {
+        display: block;
+    }
+
+    ul.text-cloud {
+        margin-block: 1.5em;
+        padding-inline-start: 0;
+
+        list-style-type: none;
+
+        display: grid;
+        grid-template-columns: 3rem repeat(22, 1fr) 3rem;
+        row-gap: 1em;
+    }
+
     #who .img-patch > img:nth-child(1) {
         grid-row: 1 / 4;
         grid-column: 1 / 11;
@@ -163,6 +185,26 @@
     #who .img-patch > img:nth-child(2) {
         grid-row: 2 / 3;
         grid-column: 13 / 16;
+    }
+
+    #what ul.text-cloud > li:nth-child(1) {
+        grid-column: 2 / 24;
+    }
+
+    #what ul.text-cloud > li:nth-child(2) {
+        grid-column: 11 / 24;
+    }
+
+    #what ul.text-cloud > li:nth-child(3) {
+        grid-column: 4 / 24;
+    }
+
+    #what ul.text-cloud > li:nth-child(4) {
+        grid-column: 8 / 24;
+    }
+
+    #what ul.text-cloud > li:nth-child(5) {
+        grid-column: 2 / 24;
     }
 
     #how .img-patch > img:nth-child(1) {
