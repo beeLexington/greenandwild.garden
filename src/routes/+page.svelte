@@ -150,7 +150,7 @@
         grid-column-end: 4;
 
         display: grid;
-        grid-template-columns: 2rem repeat(22, 1fr) 2rem;
+        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
         grid-template-rows: 1fr auto 1fr;
         column-gap: 0.5em;
 
@@ -198,7 +198,7 @@
         grid-column-end: 4;
 
         display: grid;
-        grid-template-columns: 2rem repeat(22, 1fr) 2rem;
+        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
         column-gap: 0.5em;
     }
 
