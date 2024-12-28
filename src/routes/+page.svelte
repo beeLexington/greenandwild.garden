@@ -14,7 +14,7 @@
 <Header />
 
 <section id="who">
-    <h2>I'm a queer trans non binary <span>gardener</span>...</h2>
+    <h2>More than just your basic <span>gardener</span></h2>
 
     <ImagePatch>
         <!-- add in alt description - describe the different plants in the image -->
@@ -31,8 +31,8 @@
 
     <TextPatch>
         <p>
-            ...working in the Hertfordshire area with an RHS Level 2 Certificate
-            in Practical Horticulture.
+            (re-write this paragrah) working in the Hertfordshire area with an
+            RHS Level 2 Certificate in Practical Horticulture.
         </p>
 
         <p>
@@ -43,10 +43,21 @@
         </p>
 
         <p>
+            As I developed my practices, I saw the benefits that low impact
+            gardening had on more than just the environment. As someone who is
+            neurodivergent and sensitive to noise, I found how I garden far more
+            benefical to my overall wellbeing. It also highlighted to me just
+            how noisy the active gardening seasons can be. This gave me a real
+            push to want to provide a service that was quiet and not imposing.
+        </p>
+
+        <p>
             I've done lots of jobs in my life, including working as a software
             developer, and I am interested in how technology can make gardening
             more accessible, more affordable and more inclusive. I want a world
-            where anybody can have a garden where they feel comfortable.
+            where anybody can have a garden where they feel comfortable. As a
+            queer trans non binary person, I understand first hand how important
+            this is.
         </p>
     </TextPatch>
 </section>
