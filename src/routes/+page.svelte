@@ -25,7 +25,7 @@
         <img
             alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
             src={portrait}
-            style="--grid-row: 2 / 3; grid-column: 13 / 16;"
+            style="--grid-row: 2 / 3; --grid-column: 13 / 16;"
         />
     </ImagePatch>
 
@@ -82,7 +82,7 @@
 
     <ImagePatch>
         <img src={sky} style="--grid-row: 1 / 4; --grid-column: 15 / 25;" />
-        <img src={flowerBee} style="--grid-row: 2 / 3; grid-column: 10 / 13;" />
+        <img src={flowerBee} style="--grid-row: 2 / 3; --grid-column: 10 / 13;" />
     </ImagePatch>
 
     <TextPatch id="how-issues" position="center-wide">
