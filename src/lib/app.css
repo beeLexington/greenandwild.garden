@@ -13,13 +13,13 @@
 	--body-font-style: normal;
 	--body-line-height: 1.3;
 
-	--heading-font-family: "Lexend", sans-serif;
+	--heading-font-family: "Roboto", serif;
 	--heading-font-optical-sizing: auto;
 	--heading-font-weight: 400;
 	--heading-font-style: normal;
 	--heading-line-height: 1.5;
 
-	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%)
+	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%);
 }
 
 * {
