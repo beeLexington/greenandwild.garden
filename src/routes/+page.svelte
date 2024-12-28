@@ -9,6 +9,7 @@
     import ImagePatch from "$lib/image-patch.svelte";
     import ListCloud from "$lib/list-cloud.svelte";
     import TextPatch from "$lib/text-patch.svelte";
+    import Footer from "$lib/footer.svelte";
 </script>
 
 <Header />
@@ -19,6 +20,7 @@
     <ImagePatch>
         <!-- add in alt description - describe the different plants in the image -->
         <img
+            alt=""
             src={gardenCloseup}
             style="--grid-row: 1 / 4; --grid-column: 1 / 11;"
         />
@@ -36,10 +38,10 @@
         </p>
 
         <p>
-            I have a particular focus on <a href="how">low impact gardening</a>
+            I have a particular focus on <a href="#how">low impact gardening</a>
             which is a natural approach for me. I came into gardening through my
-            concern over the climate crisis so I have always centred
-            environmental issues in my gardening practices.
+            concern over the climate crisis so I have always centred environmental
+            issues in my gardening practices.
         </p>
 
         <p>
@@ -82,8 +84,8 @@
 
         <p>
             If you have a job to do in your garden and you're not sure if I'm
-            the right person for you, <a href="#contact">contact me</a> and I'm
-            always happy to answer any questions.
+            the right person for you, <a href="#contact">contact me</a> and I'm always
+            happy to answer any questions.
         </p>
     </TextPatch>
 </section>
@@ -92,14 +94,24 @@
     <h2>Low impact gardening in <span>practice</span></h2>
 
     <ImagePatch>
-        <img src={sky} style="--grid-row: 1 / 4; --grid-column: 15 / 25;" />
-        <img src={flowerBee} style="--grid-row: 2 / 3; --grid-column: 10 / 13;" />
+        <!-- add in alt description -->
+        <img
+            alt=""
+            src={sky}
+            style="--grid-row: 1 / 4; --grid-column: 15 / 25;"
+        />
+        <!-- add in alt description -->
+        <img
+            alt=""
+            src={flowerBee}
+            style="--grid-row: 2 / 3; --grid-column: 10 / 13;"
+        />
     </ImagePatch>
 
     <TextPatch id="how-issues" position="center-wide">
         <p>
-            Gardening can have a wide impact on the local environment. Low impact
-            gardening is about reducing that impact.
+            Gardening can have a wide impact on the local environment. Low
+            impact gardening is about reducing that impact.
         </p>
 
         <p>When working in a garden, I consider:</p>
@@ -150,6 +162,25 @@
 
 <BreakSection src={meadowGrass} />
 
+<section id="contact">
+    <h2>How to get in touch with me</h2>
+    <p>
+        You can email me at <a href="mailto:greenandwild@proton.me"
+            >greenandwild@proton.me</a
+        > or fill in the contact form below
+    </p>
+
+    <iframe
+        title=""
+        class="airtable-embed"
+        src="https://airtable.com/embed/appXJNuU4f3XjYZZT/pagSWkN81JdVAC0r4/form"
+        frameborder="0"
+        onmousewheel=""
+    ></iframe>
+</section>
+
+<Footer />
+
 <style>
     section {
         padding-block: 6rem;
@@ -177,5 +208,13 @@
 
     h2 > span {
         font-style: italic;
+    }
+
+    iframe {
+        background: transparent;
+        border: 1px solid #ccc;
+        width: 50%;
+        height: 45rem;
+        font-size: medium;
     }
 </style>
