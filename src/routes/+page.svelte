@@ -1,37 +1,45 @@
 <script>
-    import Header from "$lib/header.svelte";
-    import portrait from "$lib/assets/portrait.jpg";
+    import flowerBee from "$lib/assets/flower-bee.jpg";
     import gardenCloseup from "$lib/assets/garden-closeup.jpg";
     import meadowGrass from "$lib/assets/meadow-grass.jpg";
+    import portrait from "$lib/assets/portrait.jpg";
     import sky from "$lib/assets/sky.jpg";
-    import flowerBee from "$lib/assets/flower-bee.jpg";
+    import BreakSection from "$lib/break-section.svelte";
+    import Header from "$lib/header.svelte";
+    import ImagePatch from "$lib/image-patch.svelte";
+    import ListCloud from "$lib/list-cloud.svelte";
+    import TextPatch from "$lib/text-patch.svelte";
 </script>
 
 <Header />
 
 <section id="who">
-    <h2>I am a queer trans non binary <span>gardener</span>...</h2>
+    <h2>I'm a queer trans non binary <span>gardener</span>...</h2>
 
-    <div class="img-patch">
-        <!-- add in alt descritpion - describe the different plants with in the image -->
-        <img src={gardenCloseup} />
+    <ImagePatch>
+        <!-- add in alt description - describe the different plants in the image -->
+        <img
+            src={gardenCloseup}
+            style="--grid-row: 1 / 4; --grid-column: 1 / 11;"
+        />
         <img
             alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
             src={portrait}
+            style="--grid-row: 2 / 3; grid-column: 13 / 16;"
         />
-    </div>
+    </ImagePatch>
 
-    <div class="text-patch">
+    <TextPatch>
         <p>
             ...working in the Hertfordshire area with an RHS Level 2 Certificate
             in Practical Horticulture.
         </p>
 
         <p>
-            I have a particular focus on low impact gardening which is a natural
-            approach for me. I came into gardening through my concern over the
-            climate crisis so I have always centered environmental issues in my
-            gardening practices.
+            I have a particular focus on <a href="how">low impact gardening</a>
+            which is a natural approach for me. I came into gardening through my
+            concern over the climate crisis so I have always centred
+            environmental issues in my gardening practices.
         </p>
 
         <p>
@@ -40,185 +48,123 @@
             more accessible, more affordable and more inclusive. I want a world
             where anybody can have a garden where they feel comfortable.
         </p>
-    </div>
+    </TextPatch>
 </section>
 
-<section id="services">
-    <h2>I offer a variety of garden maintenance <span>services</span></h2>
+<BreakSection src={meadowGrass} />
 
-    <div class="text-patch left">
-        <ul>
-            <li>Maintaining existing plants and beds</li>
-            <li>Specialised shrub pruning</li>
-            <li>Looking after compost bins</li>
-            <li>Vegetable tending</li>
-            <li>Scything small meadow areas</li>
-        </ul>
+<section id="what">
+    <h2>I provide garden maintenance <span>services</span></h2>
+
+    <TextPatch position="left-wide">
+        <p>Some examples of things I do include:</p>
+
+        <ListCloud>
+            <li style="--grid-column: 2 / 24;">
+                Maintaining existing plants and beds
+            </li>
+            <li style="--grid-column: 11 / 24;">Specialised shrub pruning</li>
+            <li style="--grid-column: 4 / 24;">Looking after compost bins</li>
+            <li style="--grid-column: 8 / 24;">Vegetable tending</li>
+            <li style="--grid-column: 2 / 24;">Scything small meadow areas</li>
+        </ListCloud>
 
         <p>
-            If you are not sure if I can do something, contact me and I am happy
-            to help.
+            If you have a job to do in your garden and you're not sure if I'm
+            the right person for you, <a href="#contact">contact me</a> and I'm
+            always happy to answer any questions.
         </p>
-    </div>
-</section>
-
-<section class="break-section">
-    <img src={meadowGrass} display="presentation" alt="" />
+    </TextPatch>
 </section>
 
 <section id="how">
-    <h2>Key areas I try to consider when <span>gardening</span></h2>
+    <h2>Low impact gardening in <span>practice</span></h2>
 
-    <div class="text-patch right">
-        <ul>
-            <li>Noise pollution</li>
-            <li>local air pollution</li>
-            <li>soil disturbance</li>
-            <li>local wildlife</li>
-            <li>the materials brought into the garden</li>
-            <li>the materials removed from the garden</li>
-            <li>carbon emissions</li>
-        </ul>
-    </div>
+    <ImagePatch>
+        <img src={sky} style="--grid-row: 1 / 4; --grid-column: 15 / 25;" />
+        <img src={flowerBee} style="--grid-row: 2 / 3; grid-column: 10 / 13;" />
+    </ImagePatch>
 
-    <h2>In practice this looks like</h2>
+    <TextPatch id="how-issues" position="center-wide">
+        <p>
+            Gardening can have a wide impact on the local environment. Low impact
+            gardening is about reducing that impact.
+        </p>
 
-    <div class="img-patch">
-        <img src={sky} />
-        <img src={flowerBee} />
-    </div>
+        <p>When working in a garden, I consider:</p>
 
-    <div class="text-patch left">
-        <ul>
-            <li>Using organic and vegan practices</li>
-            <li>
-                Use hand tools over power tools to reduce noise and carbon
-                emissions
+        <ListCloud>
+            <li style="--grid-column: 2 / 13;">Noise pollution</li>
+            <li style="--grid-column: 13 / 24;">Local air pollution</li>
+            <li style="--grid-column: 7 / 24;">Soil disturbance</li>
+            <li style="--grid-column: 6 / 24;">Local wildlife</li>
+            <li style="--grid-column: 4 / 11;">Waste</li>
+            <li style="--grid-column: 11 / 24;">Carbon emissions</li>
+        </ListCloud>
+    </TextPatch>
+
+    <TextPatch id="how-practices" position="center-wide">
+        <p>I do this by:</p>
+
+        <ListCloud>
+            <li style="--grid-column: 2 / 14;">
+                Using organic and vegan practices
             </li>
-            <li>
-                Use circular practices and reduce waste that needs to be removed
+            <li style="--grid-column: 6 / 18;">
+                Using hand tools over power tools to reduce noise pollution, air
+                pollution, and carbon emissions
+            </li>
+            <li style="--grid-column: 3 / 15;">
+                Using circular practices to reuse waste instead of removing it
                 from the garden
             </li>
-            <li>
-                Utilise resources provided naturally, such as rain water
-                harvesting, home made compost
+            <li style="--grid-column: 12 / 24;">
+                Making use of naturally provided resources such as harvested
+                rain water and home made compost
             </li>
-            <li>
-                Reduce the amount of soil disturbance within the garden by
-                incorporating no dig practices
+            <li style="--grid-column: 2 / 14;">
+                Incorporating no dig practices to reduce soil disturbance
             </li>
-            <li>
-                Source local and sustainable plants and planting materials to
+            <li style="--grid-column: 10 / 22;">
+                Sourcing local and sustainable plants and planting materials to
                 reduce environmental impact and support other local businesses
             </li>
-            <li>
-                Understand the needs of local wildlife to ensure that I have
+            <li style="--grid-column: 7 / 19;">
+                Understanding the needs of local wildlife to make sure I have
                 minimal impact on them
             </li>
-        </ul>
-    </div>
+        </ListCloud>
+    </TextPatch>
 </section>
+
+<BreakSection src={meadowGrass} />
 
 <style>
     section {
         padding-block: 6rem;
         display: grid;
-        grid-template-columns: 1rem auto 1rem;
+        grid-template-columns: 1rem repeat(22, 1fr) 1rem;
     }
 
-    section :global(:first-child) {
+    section > :global(*) {
+        grid-column: 2 / 24;
+    }
+
+    section > :global(:first-child) {
         margin-block-start: 0;
     }
 
-    section :global(:last-child) {
+    section > :global(:last-child) {
         margin-block-end: 0;
     }
 
     h2 {
         font-size: 5rem;
         margin-block-end: 0;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column: 2 / 24;
     }
 
     h2 > span {
         font-style: italic;
-    }
-
-    .img-patch {
-        grid-column-start: 1;
-        grid-column-end: 4;
-
-        display: grid;
-        grid-template-columns: 2rem repeat(22, 1fr) 2rem;
-        grid-template-rows: 1fr auto 1fr;
-        column-gap: 0.5em;
-
-        margin-block-end: 6rem;
-    }
-
-    #who .img-patch > img:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: 11;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-
-    #who .img-patch > img:nth-child(2) {
-        grid-column-start: 13;
-        grid-column-end: 16;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .break-section > img {
-        grid-column-start: 1;
-        grid-column-end: 4;
-        max-height: 50vh;
-        object-fit: cover;
-        width: 100%;
-    }
-
-    #how .img-patch > img:nth-child(1) {
-        grid-column-start: 15;
-        grid-column-end: 25;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-
-    #how .img-patch > img:nth-child(2) {
-        grid-column-start: 10;
-        grid-column-end: 13;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .text-patch {
-        grid-column-start: 1;
-        grid-column-end: 4;
-
-        display: grid;
-        grid-template-columns: 2rem repeat(22, 1fr) 2rem;
-        column-gap: 0.5em;
-    }
-
-    #who .text-patch > * {
-        grid-column-start: 9;
-        grid-column-end: 17;
-    }
-
-    #services .text-patch.left > * {
-        grid-column-start: 2;
-        grid-column-end: 10;
-    }
-
-    #how .text-patch.right > * {
-        grid-column-start: 16;
-        grid-column-end: 24;
-    }
-
-    #how .text-patch.left > * {
-        grid-column-start: 2;
-        grid-column-end: 10;
     }
 </style>

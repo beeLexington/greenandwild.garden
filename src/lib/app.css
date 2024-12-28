@@ -3,7 +3,7 @@
 	--colour-purple: 170, 150, 179;
 	--colour-green: 193, 207, 193;
 	--colour-black: 34, 34, 34;
-	--colour-white: 221, 221, 221;
+	--colour-white: 238, 231, 221;
 
 	--colour-accent: var(--colour-green);
 
@@ -18,6 +18,8 @@
 	--heading-font-weight: 400;
 	--heading-font-style: normal;
 	--heading-line-height: 1.5;
+
+	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%)
 }
 
 html {
@@ -48,8 +50,7 @@ h6 {
 }
 
 p {
-	margin-block-start: 0.5em;
-	margin-block-end: 0.5em;
+	margin-block: 1em;
 }
 
 a {
@@ -72,4 +73,5 @@ a:focus {
 
 img {
 	max-width: 100%;
+	filter: var(--image-filter);
 }
