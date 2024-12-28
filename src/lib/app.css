@@ -22,12 +22,18 @@
 	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%)
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	background-color: rgb(var(--colour-white));
 	color: rgb(var(--colour-black));
 }
 
 body {
+	overscroll-behavior: none;
+
 	font-family: var(--body-font-family);
 	font-optical-sizing: var(--body-font-optical-sizing);
 	font-weight: var(--body-font-weight);
