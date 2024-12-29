@@ -8,7 +8,7 @@
     <p>
         <a href="/terms">Terms and conditions</a>
     </p>
-    <p>Copyright ©2024 Green and Wild. All Rights Reserved</p>
+    <p>Copyright © 2024 Green and Wild. All Rights Reserved</p>
 </footer>
 
 <style>
