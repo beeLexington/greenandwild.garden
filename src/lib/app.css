@@ -19,6 +19,16 @@
 	--heading-font-style: normal;
 	--heading-line-height: 1.5;
 
+	--logo-text-font-family: "Roboto", sans-serif;
+	--logo-text-font-weight: 400;
+	--logo-text-font-optical-sizing: auto;
+	--logo-text-font-style: normal;
+
+	--logo-amp-font-family: "Lexend", sans-serif;
+	--logo-amp-font-weight: 600;
+	--logo-amp-font-optical-sizing: auto;
+	--logo-amp-font-style: normal;
+
 	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%);
 }
 
