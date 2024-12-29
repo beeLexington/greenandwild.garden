@@ -167,19 +167,21 @@
 <section id="contact">
     <h2>How to <span>get in touch</span></h2>
 
-    <p>
-        You can email me at <a href="mailto:greenandwild@proton.me"
-            >greenandwild@proton.me</a
-        > or fill in the contact form below
-    </p>
+    <TextPatch position="left-wide">
+        <p>
+            You can email me at <a href="mailto:greenandwild@proton.me"
+                >greenandwild@proton.me</a
+            > or fill in the contact form below
+        </p>
 
-    <iframe
-        title=""
-        class="airtable-embed"
-        src="https://airtable.com/embed/appXJNuU4f3XjYZZT/pagSWkN81JdVAC0r4/form"
-        frameborder="0"
-        onmousewheel=""
-    ></iframe>
+        <iframe
+            title="Contact me"
+            class="airtable-embed"
+            src="https://airtable.com/embed/appXJNuU4f3XjYZZT/pagSWkN81JdVAC0r4/form"
+            frameborder="0"
+            onmousewheel=""
+        />
+    </TextPatch>
 </section>
 
 <Footer />
@@ -214,10 +216,8 @@
     }
 
     iframe {
-        background: transparent;
-        border: 1px solid #ccc;
-        width: 50%;
+        width: 100%;
         height: 45rem;
-        font-size: medium;
+        background: rgb(255, 255, 255);
     }
 </style>
