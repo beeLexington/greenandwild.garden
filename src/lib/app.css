@@ -19,6 +19,12 @@
 	--heading-font-style: normal;
 	--heading-line-height: 1.5;
 
+	--logo-font-family: "Lexend", sans-serif;
+	--logo-font-optical-sizing: auto;
+	--logo-font-style: normal;
+	--logo-text-font-weight: 400;
+	--logo-amp-font-weight: 600;
+
 	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%);
 }
 

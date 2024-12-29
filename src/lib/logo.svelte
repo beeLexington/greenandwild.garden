@@ -7,6 +7,10 @@
 <style>
     h1 {
         margin-block: 0;
+        font-family: var(--logo-font-family);
+        font-optical-sizing: var(--logo-font-optical-sizing);
+        font-weight: var(--logo-text-font-weight);
+        font-style: var(--logo-font-style);
         line-height: 1;
         font-size: 2.5rem;
         display: flex;
@@ -26,6 +30,7 @@
     }
 
     h1 > :nth-child(2) {
+        font-weight: var(--logo-amp-font-weight);
         font-size: 2em;
 
         animation-name: shrink;
