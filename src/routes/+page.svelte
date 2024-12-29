@@ -5,11 +5,11 @@
     import portrait from "$lib/assets/portrait.jpg";
     import sky from "$lib/assets/sky.jpg";
     import BreakSection from "$lib/break-section.svelte";
+    import Footer from "$lib/footer.svelte";
     import Header from "$lib/header.svelte";
     import ImagePatch from "$lib/image-patch.svelte";
     import ListCloud from "$lib/list-cloud.svelte";
     import TextPatch from "$lib/text-patch.svelte";
-    import Footer from "$lib/footer.svelte";
 </script>
 
 <Header />
@@ -33,33 +33,34 @@
 
     <TextPatch>
         <p>
-            (re-write this paragrah) working in the Hertfordshire area with an
-            RHS Level 2 Certificate in Practical Horticulture.
-        </p>
-
-        <p>
             I have a particular focus on <a href="#how">low impact gardening</a>
             which is a natural approach for me. I came into gardening through my
-            concern over the climate crisis so I have always centred environmental
-            issues in my gardening practices.
+            concern about the climate crisis so I have always centred
+            environmental issues in my gardening.
         </p>
 
         <p>
-            As I developed my practices, I saw the benefits that low impact
+            As I developed my practice, I saw the benefits that low impact
             gardening had on more than just the environment. As someone who is
-            neurodivergent and sensitive to noise, I found how I garden far more
-            benefical to my overall wellbeing. It also highlighted to me just
-            how noisy the active gardening seasons can be. This gave me a real
-            push to want to provide a service that was quiet and not imposing.
+            neurodivergent and sensitive to noise, I found how I garden far
+            better for my overall wellbeing. It also highlighted to me just how
+            noisy the active gardening seasons can be. This gave me a real push
+            to want to provide a service that was quiet and unimposing.
         </p>
 
         <p>
             I've done lots of jobs in my life, including working as a software
-            developer, and I am interested in how technology can make gardening
-            more accessible, more affordable and more inclusive. I want a world
-            where anybody can have a garden where they feel comfortable. As a
-            queer trans non binary person, I understand first hand how important
-            this is.
+            developer, and I am also interested in how technology can make
+            gardening more accessible, more affordable, and more inclusive. I
+            want a world where anybody can have a garden where they feel
+            comfortable. As a queer trans non binary person, I understand first
+            hand how important this is.
+        </p>
+
+        <p>
+            I work in the Hertfordshire area and have an RHS Level 2 Certificate
+            in Practical Horticulture, so if I sound like a good fit for you,
+            please <a href="#contact">get in touch</a>.
         </p>
     </TextPatch>
 </section>
@@ -84,8 +85,8 @@
 
         <p>
             If you have a job to do in your garden and you're not sure if I'm
-            the right person for you, <a href="#contact">contact me</a> and I'm always
-            happy to answer any questions.
+            the right person for you, <a href="#contact">contact me</a> and I'm
+            always happy to answer any questions.
         </p>
     </TextPatch>
 </section>
@@ -110,8 +111,9 @@
 
     <TextPatch id="how-issues" position="center-wide">
         <p>
-            Gardening can have a wide impact on the local environment. Low
-            impact gardening is about reducing that impact.
+            Gardening can have a wide effect on the local environment. Low
+            impact gardening is about minimising that impact as much as
+            possible.
         </p>
 
         <p>When working in a garden, I consider:</p>
@@ -163,7 +165,8 @@
 <BreakSection src={meadowGrass} />
 
 <section id="contact">
-    <h2>How to get in touch with me</h2>
+    <h2>How to <span>get in touch</span></h2>
+
     <p>
         You can email me at <a href="mailto:greenandwild@proton.me"
             >greenandwild@proton.me</a
