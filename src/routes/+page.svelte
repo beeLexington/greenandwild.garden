@@ -71,7 +71,14 @@
     <h2>I provide garden maintenance <span>services</span></h2>
 
     <TextPatch position="left-wide">
-        <p>Some examples of things I do include:</p>
+        <p>
+            I offer regular garden maintenance as well as one off visits. It's
+            important that you feel happy and comfortable with me working in
+            your space, so I take the time to get to know you and understand
+            what your needs and comfort levels are before carrying out any work.
+        </p>
+
+        <p>Some of the key areas I focus on are:</p>
 
         <ListCloud>
             <li style="--grid-column: 2 / 24;">
@@ -80,13 +87,15 @@
             <li style="--grid-column: 11 / 24;">Specialised shrub pruning</li>
             <li style="--grid-column: 4 / 24;">Looking after compost bins</li>
             <li style="--grid-column: 8 / 24;">Vegetable tending</li>
-            <li style="--grid-column: 2 / 24;">Scything small meadow areas</li>
+            <li style="--grid-column: 2 / 24;">
+                Scything of grass and meadow areas
+            </li>
         </ListCloud>
 
         <p>
             If you have a job to do in your garden and you're not sure if I'm
-            the right person for you, <a href="#contact">contact me</a> and I'm
-            always happy to answer any questions.
+            the right person for you, <a href="#contact">contact me</a> and I'm always
+            happy to answer any questions.
         </p>
     </TextPatch>
 </section>
