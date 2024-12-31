@@ -221,7 +221,7 @@ import TextPatch from "$lib/text-patch.svelte";
 
 	iframe {
 		width: 100%;
-		height: 45rem;
+		height: calc(584px + 147px);
 		background: rgb(255, 255, 255);
 	}
 </style>
