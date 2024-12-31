@@ -1,5 +1,15 @@
-<div class="image-patch">
-	<slot />
+<script>
+export let position = "left";
+</script>
+
+<div class="image-patch {position}">
+	<div>
+		<slot name="outer" />
+	</div>
+
+	<div>
+		<slot name="inner" />
+	</div>
 </div>
 
 <style>
@@ -14,10 +24,27 @@
 		margin-block-end: 6rem;
 	}
 
-	.image-patch > :global(img) {
-		grid-row: var(--grid-row, 1 / 4);
-		grid-column: var(--grid-column, 2 / 24);
+	.image-patch.left > :nth-child(1) {
+		grid-row: 1 / 4;
+		grid-column: 1 / 11;
+	}
 
+	.image-patch.left > :nth-child(2) {
+		grid-row: 2 / 3;
+		grid-column: 13 / 16;
+	}
+
+	.image-patch.right > :nth-child(1) {
+		grid-row: 1 / 4;
+		grid-column: 15 / 25;
+	}
+
+	.image-patch.right > :nth-child(2) {
+		grid-row: 2 / 3;
+		grid-column: 10 / 13;
+	}
+
+	.image-patch :global(img) {
 		display: block;
 	}
 </style>

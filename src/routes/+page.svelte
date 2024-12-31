@@ -16,17 +16,13 @@ import TextPatch from "$lib/text-patch.svelte";
 <section id="who">
 	<h2>More than just your basic <span>gardener</span></h2>
 
-	<ImagePatch>
+	<ImagePatch position="left">
 		<!-- add in alt description - describe the different plants in the image -->
+		<img slot="outer" alt="" src={gardenCloseup} />
 		<img
-			alt=""
-			src={gardenCloseup}
-			style="--grid-row: 1 / 4; --grid-column: 1 / 11;"
-		/>
-		<img
+			slot="inner"
 			alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
 			src={portrait}
-			style="--grid-row: 2 / 3; --grid-column: 13 / 16;"
 		/>
 	</ImagePatch>
 
@@ -106,15 +102,11 @@ import TextPatch from "$lib/text-patch.svelte";
 <section id="how">
 	<h2>Low impact gardening in <span>practice</span></h2>
 
-	<ImagePatch>
+	<ImagePatch position="right">
 		<!-- add in alt description -->
-		<img alt="" src={sky} style="--grid-row: 1 / 4; --grid-column: 15 / 25;" />
+		<img slot="outer" alt="" src={sky} />
 		<!-- add in alt description -->
-		<img
-			alt=""
-			src={flowerBee}
-			style="--grid-row: 2 / 3; --grid-column: 10 / 13;"
-		/>
+		<img slot="inner" alt="" src={flowerBee} />
 	</ImagePatch>
 
 	<TextPatch position="center-wide">
