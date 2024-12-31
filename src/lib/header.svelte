@@ -6,7 +6,7 @@ import Logo from "$lib/logo.svelte";
 <header style="--background-image-src: url({meadowGrass});">
 	<div>
 		<Logo />
-		<div><span>Affordable low impact gardening</span></div>
+		<div><span>Low impact gardening services</span></div>
 	</div>
 </header>
 

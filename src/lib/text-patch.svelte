@@ -8,6 +8,10 @@ export let position = "center";
 </div>
 
 <style>
+	div {
+		margin-block: 1em;
+	}
+
 	div.left {
 		grid-column: 2 / 10;
 	}
@@ -30,5 +34,13 @@ export let position = "center";
 
 	div.right-wide {
 		grid-column: 14 / 24;
+	}
+
+	div > :global(:first-child) {
+		margin-block-start: 0;
+	}
+
+	div > :global(:last-child) {
+		margin-block-end: 0;
 	}
 </style>

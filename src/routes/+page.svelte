@@ -8,7 +8,6 @@ import BreakSection from "$lib/break-section.svelte";
 import Footer from "$lib/footer.svelte";
 import Header from "$lib/header.svelte";
 import ImagePatch from "$lib/image-patch.svelte";
-import ListCloud from "$lib/list-cloud.svelte";
 import TextPatch from "$lib/text-patch.svelte";
 </script>
 
@@ -34,33 +33,33 @@ import TextPatch from "$lib/text-patch.svelte";
 	<TextPatch>
 		<p>
 			I have a particular focus on <a href="#how">low impact gardening</a>
-			which is a natural approach for me. I came into gardening through my concern
-			about the climate crisis so I have always centred environmental issues in my
-			gardening.
+			which is a natural approach for me. My interest in gardening came through my
+			concern about the climate crisis and I have always centred environmental issues
+			in what I do.
 		</p>
 
 		<p>
-			As I developed my practice, I saw the benefits that low impact gardening
-			had on more than just the environment. As someone who is neurodivergent
-			and sensitive to noise, I found how I garden far better for my overall
-			wellbeing. It also highlighted to me just how noisy the active gardening
-			seasons can be. This gave me a real push to want to provide a service that
-			was quiet and unimposing.
+			As my practice has developed, I have seen the benefits that low impact
+			gardening has on more than just the environment. As someone who is
+			neurodivergent and sensitive to noise, I've found how I garden far better
+			for my overall wellbeing. It's also highlighted to me just how noisy the
+			active gardening seasons can be. This has given me a real push to want to
+			provide a service that is quiet and considerate of the local environment.
 		</p>
 
 		<p>
-			I've done lots of jobs in my life, including working as a software
-			developer, and I am also interested in how technology can make gardening
-			more accessible, more affordable, and more inclusive. I want a world where
-			anybody can have a garden where they feel comfortable. As a queer trans
-			non binary person, I understand first hand how important this is.
+			As well as reducing its impact on the environment, I want to make
+			gardening more accessible, more affordable, and more inclusive. I want a
+			world where anybody can have an outdoor space where they feel comfortable,
+			and I take great care when thinking about the way I work to try to help
+			achieve that. As a queer trans non-binary person, I understand first hand
+			how important this is.
 		</p>
 
 		<p>
-			I work in the Hertfordshire area and have an RHS Level 2 Certificate in
-			Practical Horticulture, so if I sound like a good fit for you, please <a
-				href="#contact">get in touch</a
-			>.
+			I work in and around Hertfordshire and Bedfordshire and have an RHS Level
+			2 Certificate in Practical Horticulture. If I sound like a good fit for
+			you, <a href="#contact">get in touch</a>.
 		</p>
 	</TextPatch>
 </section>
@@ -68,9 +67,9 @@ import TextPatch from "$lib/text-patch.svelte";
 <BreakSection src={meadowGrass} />
 
 <section id="what">
-	<h2>I provide garden maintenance <span>services</span></h2>
+	<h2>Gardening services tailored to <span>you</span></h2>
 
-	<TextPatch position="left-wide">
+	<TextPatch position="left">
 		<p>
 			I offer regular garden maintenance as well as one off visits. It's
 			important that you feel happy and comfortable with me working in your
@@ -78,22 +77,28 @@ import TextPatch from "$lib/text-patch.svelte";
 			needs and comfort levels are before carrying out any work.
 		</p>
 
-		<p>Some of the key areas I focus on are:</p>
+		<p>Some of the key services I offer are:</p>
 
-		<ListCloud>
-			<li style="--grid-column: 2 / 24;">
-				Maintaining existing plants and beds
-			</li>
-			<li style="--grid-column: 11 / 24;">Specialised shrub pruning</li>
-			<li style="--grid-column: 4 / 24;">Looking after compost bins</li>
-			<li style="--grid-column: 8 / 24;">Vegetable tending</li>
-			<li style="--grid-column: 2 / 24;">Scything of grass and meadow areas</li>
-		</ListCloud>
+		<ul>
+			<li>Maintaining existing plants and beds</li>
+			<li>Specialised shrub pruning</li>
+			<li>Looking after compost bins</li>
+			<li>Vegetable tending</li>
+			<li>Scything of grass and meadow areas</li>
+		</ul>
+
+		<p>
+			I'm happy to work from a list of jobs you want me to do, but if you'd
+			rather leave it to me, I can assess what needs doing when and prioritise
+			accordingly to make sure you have the garden you want all year round.
+		</p>
 
 		<p>
 			If you have a job to do in your garden and you're not sure if I'm the
-			right person for you, <a href="#contact">contact me</a> and I'm always happy
-			to answer any questions.
+			right person for you, or if you have any needs or concerns about how I
+			might work in your space, please <a href="#contact">contact me</a>. I'm
+			always happy to answer any questions and work with you to accommodate any
+			specific requirements you might have.
 		</p>
 	</TextPatch>
 </section>
@@ -112,53 +117,53 @@ import TextPatch from "$lib/text-patch.svelte";
 		/>
 	</ImagePatch>
 
-	<TextPatch id="how-issues" position="center-wide">
+	<TextPatch position="center-wide">
 		<p>
-			Gardening can have a wide effect on the local environment. Low impact
-			gardening is about minimising that impact as much as possible.
+			Creating and maintaining an outdoor space has an impact on wildlife and
+			the local environment, but not all of that impact is negative. Low impact
+			gardening is about reducing the negatives and increasing the positives.
+			For me, it's about creating a shared understanding of your needs, budget,
+			garden, and local environment, so that we can balance those factors to
+			help you have the garden you want while managing the impact it has.
 		</p>
 
-		<p>When working in a garden, I consider:</p>
+		<p>Some of the things I normally do in a garden include:</p>
 
-		<ListCloud>
-			<li style="--grid-column: 2 / 13;">Noise pollution</li>
-			<li style="--grid-column: 13 / 24;">Local air pollution</li>
-			<li style="--grid-column: 7 / 24;">Soil disturbance</li>
-			<li style="--grid-column: 6 / 24;">Local wildlife</li>
-			<li style="--grid-column: 4 / 11;">Waste</li>
-			<li style="--grid-column: 11 / 24;">Carbon emissions</li>
-		</ListCloud>
-	</TextPatch>
-
-	<TextPatch id="how-practices" position="center-wide">
-		<p>I do this by:</p>
-
-		<ListCloud>
-			<li style="--grid-column: 2 / 14;">Using organic and vegan practices</li>
-			<li style="--grid-column: 6 / 18;">
+		<ul>
+			<li>Using organic practices for safer humans, pets, and wildlife</li>
+			<li>
 				Using hand tools over power tools to reduce noise pollution, air
 				pollution, and carbon emissions
 			</li>
-			<li style="--grid-column: 3 / 15;">
+			<li>
 				Using circular practices to reuse waste instead of removing it from the
-				garden
+				garden (e.g. by using pruned branches as plant supports)
 			</li>
-			<li style="--grid-column: 12 / 24;">
+			<li>
 				Making use of naturally provided resources such as harvested rain water
 				and home made compost
 			</li>
-			<li style="--grid-column: 2 / 14;">
-				Incorporating no dig practices to reduce soil disturbance
+			<li>
+				Incorporating <a
+					href="https://www.charlesdowding.co.uk/resources/beginners-guide"
+					>no dig practices</a
+				> to reduce soil disturbance
 			</li>
-			<li style="--grid-column: 10 / 22;">
-				Sourcing local and sustainable plants and planting materials to reduce
-				environmental impact and support other local businesses
+			<li>
+				Sourcing local and sustainable plants and planting materials (e.g. peat
+				free compost) to reduce environmental impact and support other local
+				businesses
 			</li>
-			<li style="--grid-column: 7 / 19;">
-				Understanding the needs of local wildlife to make sure I have minimal
-				impact on them
+			<li>
+				Understanding the needs of local wildlife to minimise impact on them
 			</li>
-		</ListCloud>
+		</ul>
+
+		<p>
+			If you'd like to understand more about low impact gardening and how I put
+			it into practice, please <a href="#contact">send me a message</a> and I'd be
+			happy to talk about it with you.
+		</p>
 	</TextPatch>
 </section>
 
@@ -171,7 +176,7 @@ import TextPatch from "$lib/text-patch.svelte";
 		<p>
 			You can email me at <a href="mailto:greenandwild@proton.me"
 				>greenandwild@proton.me</a
-			> or fill in the contact form below
+			> or fill in the contact form below.
 		</p>
 
 		<iframe
@@ -194,15 +199,12 @@ import TextPatch from "$lib/text-patch.svelte";
 	}
 
 	section > :global(*) {
+		margin-block-end: 0;
 		grid-column: 2 / 24;
 	}
 
 	section > :global(:first-child) {
 		margin-block-start: 0;
-	}
-
-	section > :global(:last-child) {
-		margin-block-end: 0;
 	}
 
 	h2 {
@@ -217,6 +219,25 @@ import TextPatch from "$lib/text-patch.svelte";
 		font-weight: var(--heading-emph-font-weight);
 		font-style: var(--heading-emph-font-style);
 		line-height: var(--heading-emph-line-height);
+	}
+
+	ul {
+		margin-block: 1em;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	ul > li {
+		margin-block: 1em;
+	}
+
+	ul > li:first-child {
+		margin-block-start: 0;
+	}
+
+	ul > li:last-child {
+		margin-block-end: 0;
 	}
 
 	iframe {
