@@ -1,9 +1,9 @@
-<div>
+<div class="image-patch">
 	<slot />
 </div>
 
 <style>
-	div {
+	.image-patch {
 		grid-column: 1 / 25;
 
 		display: grid;
@@ -14,7 +14,7 @@
 		margin-block-end: 6rem;
 	}
 
-	div > :global(img) {
+	.image-patch > :global(img) {
 		grid-row: var(--grid-row, 1 / 4);
 		grid-column: var(--grid-column, 2 / 24);
 
