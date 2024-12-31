@@ -65,6 +65,12 @@ import Logo from "$lib/logo.svelte";
 	header > div {
 		position: relative;
 		display: block;
+
+		font-family: var(--heading-font-family);
+		font-optical-sizing: var(--heading-font-optical-sizing);
+		font-weight: var(--heading-font-weight);
+		font-style: var(--heading-font-style);
+		line-height: var(--heading-line-height);
 	}
 
 	header > div > :global(:first-child),
