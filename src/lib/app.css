@@ -43,8 +43,15 @@
 }
 
 html {
+	font-size: 16px;
 	background-color: rgb(var(--colour-white));
 	color: rgb(var(--colour-black));
+}
+
+@media (min-width: 600px) {
+	html {
+		font-size: 18px;
+	}
 }
 
 body {
@@ -55,7 +62,6 @@ body {
 	font-weight: var(--body-font-weight);
 	font-style: var(--body-font-style);
 	line-height: var(--body-line-height);
-	font-size: 18px;
 }
 
 h1,

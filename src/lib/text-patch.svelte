@@ -10,30 +10,79 @@ export let position = "center";
 <style>
 	div {
 		margin-block: 1em;
+		grid-column: 2 / 24;
 	}
 
-	div.left {
-		grid-column: 2 / 10;
+	@media (min-width: 600px) {
+		div.left {
+			grid-column: 2 / 14;
+		}
 	}
 
-	div.left-wide {
-		grid-column: 2 / 12;
+	@media (min-width: 900px) {
+		div.left {
+			grid-column: 2 / 10;
+		}
 	}
 
-	div.center {
-		grid-column: 9 / 17;
+	@media (min-width: 600px) {
+		div.left-wide {
+			grid-column: 2 / 16;
+		}
 	}
 
-	div.center-wide {
-		grid-column: 8 / 18;
+	@media (min-width: 900px) {
+		div.left-wide {
+			grid-column: 2 / 12;
+		}
 	}
 
-	div.right {
-		grid-column: 16 / 24;
+	@media (min-width: 600px) {
+		div.center {
+			grid-column: 7 / 19;
+		}
 	}
 
-	div.right-wide {
-		grid-column: 14 / 24;
+	@media (min-width: 900px) {
+		div.center {
+			grid-column: 9 / 17;
+		}
+	}
+
+	@media (min-width: 600px) {
+		div.center-wide {
+			grid-column: 6 / 20;
+		}
+	}
+
+	@media (min-width: 900px) {
+		div.center-wide {
+			grid-column: 8 / 18;
+		}
+	}
+
+	@media (min-width: 600px) {
+		div.right {
+			grid-column: 12 / 24;
+		}
+	}
+
+	@media (min-width: 900px) {
+		div.right {
+			grid-column: 16 / 24;
+		}
+	}
+
+	@media (min-width: 600px) {
+		div.right-wide {
+			grid-column: 14 / 24;
+		}
+	}
+
+	@media (min-width: 900px) {
+		div.right-wide {
+			grid-column: 10 / 24;
+		}
 	}
 
 	div > :global(:first-child) {

@@ -200,9 +200,16 @@ import TextPatch from "$lib/text-patch.svelte";
 	}
 
 	h2 {
-		font-size: 5rem;
+		font-size: 3rem;
 		margin-block-end: 0;
 		grid-column: 2 / 24;
+		text-wrap-style: balance;
+	}
+
+	@media (min-width: 900px) {
+		h2 {
+			font-size: 5rem;
+		}
 	}
 
 	h2 > span {
@@ -234,7 +241,13 @@ import TextPatch from "$lib/text-patch.svelte";
 
 	iframe {
 		width: 100%;
-		height: calc(584px + 147px);
+		height: calc(598px + 147px);
 		background: rgb(255, 255, 255);
+	}
+
+	@media (min-width: 900px) {
+		iframe {
+			height: calc(584px + 147px);
+		}
 	}
 </style>
