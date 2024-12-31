@@ -19,6 +19,12 @@
 	--heading-font-style: normal;
 	--heading-line-height: 1.5;
 
+	--heading-emph-font-family: "Lexend", serif;
+	--heading-emph-font-optical-sizing: auto;
+	--heading-emph-font-weight: 600;
+	--heading-emph-font-style: normal;
+	--heading-emph-line-height: 1.5;
+
 	--logo-text-font-family: "Roboto", sans-serif;
 	--logo-text-font-weight: 400;
 	--logo-text-font-optical-sizing: auto;

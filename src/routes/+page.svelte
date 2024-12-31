@@ -212,7 +212,11 @@ import TextPatch from "$lib/text-patch.svelte";
 	}
 
 	h2 > span {
-		font-style: italic;
+		font-family: var(--heading-emph-font-family);
+		font-optical-sizing: var(--heading-emph-font-optical-sizing);
+		font-weight: var(--heading-emph-font-weight);
+		font-style: var(--heading-emph-font-style);
+		line-height: var(--heading-emph-line-height);
 	}
 
 	iframe {
