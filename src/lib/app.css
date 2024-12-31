@@ -77,7 +77,7 @@ p {
 
 a {
 	color: inherit;
-	text-decoration-thickness: 0.05em;
+	text-decoration-thickness: 0.1em;
 }
 
 a:active {
