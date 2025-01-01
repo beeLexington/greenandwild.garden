@@ -12,19 +12,29 @@ import Logo from "$lib/logo.svelte";
 
 <style>
 	header {
-		position: sticky;
-		top: 0;
-		z-index: 1;
+		position: relative;
+		height: 95vh;
+		height: 95svh;
 		padding: 1rem 1.5rem;
 		background-color: rgb(var(--colour-accent));
-
-		animation-name: shrink;
+		white-space: nowrap;
 	}
 
-	@media (prefers-reduced-motion) {
+	@media (min-width: 600px) {
 		header {
-			animation-name: unset;
-			height: 7rem;
+			position: sticky;
+			top: 0;
+			z-index: 1;
+			height: unset;
+
+			animation-name: shrink;
+		}
+
+		@media (prefers-reduced-motion) {
+			header {
+				animation-name: unset;
+				height: 7rem;
+			}
 		}
 	}
 
@@ -51,14 +61,18 @@ import Logo from "$lib/logo.svelte";
 		background-size: cover;
 		background-position: bottom;
 		filter: var(--image-filter);
-
-		animation-name: fade-out;
 	}
 
-	@media (prefers-reduced-motion) {
+	@media (min-width: 600px) {
 		header::before {
-			animation-name: unset;
-			opacity: 0;
+			animation-name: fade-out;
+		}
+
+		@media (prefers-reduced-motion) {
+			header::before {
+				animation-name: unset;
+				opacity: 0;
+			}
 		}
 	}
 
@@ -75,32 +89,65 @@ import Logo from "$lib/logo.svelte";
 
 	header > div > :global(:first-child),
 	header > div > :last-child {
-		position: fixed;
+		position: absolute;
+	}
+
+	@media (min-width: 600px) {
+		header > div > :global(:first-child),
+		header > div > :last-child {
+			position: fixed;
+		}
 	}
 
 	header > div > :global(:first-child) {
-		animation-name: move-logo-to-position;
+		top: 47.5vh;
+		top: 47.5svh;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
-	@media (prefers-reduced-motion) {
+	@media (min-width: 600px) {
 		header > div > :global(:first-child) {
-			animation-name: unset;
-			top: 1rem;
-			left: 1.5rem;
-			transform: translate(0, 0);
+			top: unset;
+			left: unset;
+			transform: unset;
+
+			animation-name: move-logo-to-position;
+		}
+
+		@media (prefers-reduced-motion) {
+			header > div > :global(:first-child) {
+				animation-name: unset;
+				top: 1rem;
+				left: 1.5rem;
+				transform: translate(0, 0);
+			}
 		}
 	}
 
 	header > div > :last-child {
-		animation-name: move-tagline-to-position;
+		top: calc(47.5vh + 7rem / 2 - 1rem + 1rem);
+		top: calc(47.5svh + 7rem / 2 - 1rem + 1rem);
+		right: 50%;
+		transform: translate(50%, -50%);
 	}
 
-	@media (prefers-reduced-motion) {
+	@media (min-width: 600px) {
 		header > div > :last-child {
-			animation-name: unset;
-			top: calc(7rem / 2);
-			right: 1.5rem;
-			transform: translate(0, -50%);
+			top: unset;
+			right: unset;
+			transform: unset;
+
+			animation-name: move-tagline-to-position;
+		}
+
+		@media (prefers-reduced-motion) {
+			header > div > :last-child {
+				animation-name: unset;
+				top: calc(7rem / 2);
+				right: 1.5rem;
+				transform: translate(0, -50%);
+			}
 		}
 	}
 
@@ -120,14 +167,17 @@ import Logo from "$lib/logo.svelte";
 	}
 
 	@supports (animation-timeline: scroll()) and (animation-range: cover) {
-		header {
-			top: calc(-95vh + 7rem);
-			animation-play-state: paused;
-		}
-
-		@media (prefers-reduced-motion) {
+		@media (min-width: 600px) {
 			header {
-				top: 0;
+				top: calc(-95vh + 7rem);
+				top: calc(-95svh + 7rem);
+				animation-play-state: paused;
+			}
+
+			@media (prefers-reduced-motion) {
+				header {
+					top: 0;
+				}
 			}
 		}
 
@@ -138,6 +188,7 @@ import Logo from "$lib/logo.svelte";
 			animation-duration: unset;
 			animation-timeline: scroll();
 			animation-range: 0 calc(95vh - 7rem);
+			animation-range: 0 calc(95svh - 7rem);
 			animation-timing-function: linear;
 		}
 	}
@@ -145,6 +196,7 @@ import Logo from "$lib/logo.svelte";
 	@keyframes shrink {
 		from {
 			height: 95vh;
+			height: 95svh;
 		}
 
 		to {
@@ -175,6 +227,7 @@ import Logo from "$lib/logo.svelte";
 	@keyframes move-logo-to-position {
 		from {
 			top: 47.5vh;
+			top: 47.5svh;
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
@@ -189,6 +242,7 @@ import Logo from "$lib/logo.svelte";
 	@keyframes move-tagline-to-position {
 		from {
 			top: calc(47.5vh + 7rem / 2 - 1rem + 1rem);
+			top: calc(47.5svh + 7rem / 2 - 1rem + 1rem);
 			right: 50%;
 			transform: translate(50%, -50%);
 		}
