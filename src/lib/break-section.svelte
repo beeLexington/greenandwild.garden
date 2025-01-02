@@ -9,11 +9,11 @@ let { src } = $props();
 </script>
 
 <section>
-	<img {src} display="presentation" alt="" />
+	<enhanced:img class="image" {src} display="presentation" alt="" />
 </section>
 
 <style>
-	section > img {
+	section .image {
 		width: 100%;
 		max-height: 50vh;
 		object-fit: cover;
