@@ -1,14 +1,22 @@
 <script>
-export let position = "left";
+/**
+ * @typedef {Object} Props
+ * @property {string} [position]
+ * @property {import('svelte').Snippet} outer
+ * @property {import('svelte').Snippet} inner
+ */
+
+/** @type {Props} */
+let { position = "left", outer, inner } = $props();
 </script>
 
 <div class="image-patch {position}">
 	<div>
-		<slot name="outer" />
+		{@render outer()}
 	</div>
 
 	<div>
-		<slot name="inner" />
+		{@render inner()}
 	</div>
 </div>
 

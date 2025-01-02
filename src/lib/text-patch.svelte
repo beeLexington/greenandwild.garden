@@ -1,10 +1,17 @@
 <script>
-export let id = undefined;
-export let position = "center";
+/**
+ * @typedef {Object} Props
+ * @property {string} [id]
+ * @property {string} [position]
+ * @property {import('svelte').Snippet} [children]
+ */
+
+/** @type {Props} */
+let { id = undefined, position = "center", children } = $props();
 </script>
 
 <div {id} class={position}>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

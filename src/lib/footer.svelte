@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <footer>
 	<p>
 		<a href="/privacy">Privacy policy</a>

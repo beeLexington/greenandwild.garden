@@ -17,13 +17,16 @@ import TextPatch from "$lib/text-patch.svelte";
 	<h2>More than just your basic <span>gardener</span></h2>
 
 	<ImagePatch position="left">
-		<!-- add in alt description - describe the different plants in the image -->
-		<img slot="outer" alt="" src={gardenCloseup} />
-		<img
-			slot="inner"
-			alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
-			src={portrait}
-		/>
+		{#snippet outer()}
+			<!-- add in alt description - describe the different plants in the image -->
+			<img alt="" src={gardenCloseup} />
+		{/snippet}
+		{#snippet inner()}
+			<img
+				alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
+				src={portrait}
+			/>
+		{/snippet}
 	</ImagePatch>
 
 	<TextPatch>
@@ -103,10 +106,14 @@ import TextPatch from "$lib/text-patch.svelte";
 	<h2>Low impact gardening in <span>practice</span></h2>
 
 	<ImagePatch position="right">
-		<!-- add in alt description -->
-		<img slot="outer" alt="" src={sky} />
-		<!-- add in alt description -->
-		<img slot="inner" alt="" src={flowerBee} />
+		{#snippet outer()}
+			<!-- add in alt description -->
+			<img alt="" src={sky} />
+		{/snippet}
+		{#snippet inner()}
+			<!-- add in alt description -->
+			<img alt="" src={flowerBee} />
+		{/snippet}
 	</ImagePatch>
 
 	<TextPatch position="center-wide">
@@ -176,8 +183,8 @@ import TextPatch from "$lib/text-patch.svelte";
 			class="airtable-embed"
 			src="https://airtable.com/embed/appXJNuU4f3XjYZZT/pagSWkN81JdVAC0r4/form"
 			frameborder="0"
-			onmousewheel=""
-		/>
+			onmousewheel={() => {}}
+		></iframe>
 	</TextPatch>
 </section>
 
