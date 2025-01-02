@@ -8,7 +8,7 @@
 				<a href="/terms">Terms and conditions</a>
 			</li>
 		</ul>
-		<p>Copyright © 2024 Green and Wild. All Rights Reserved</p>
+		<p>Copyright © 2025 Green and Wild. All Rights Reserved</p>
 	</div>
 
 	<div id="wcb" class="carbonbadge"></div>
