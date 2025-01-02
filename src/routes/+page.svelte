@@ -1,9 +1,10 @@
 <script>
-import flowerBee from "$lib/assets/flower-bee.jpg";
-import gardenCloseup from "$lib/assets/garden-closeup.jpg";
-import meadowGrass from "$lib/assets/meadow-grass.jpg";
-import portrait from "$lib/assets/portrait.jpg";
-import sky from "$lib/assets/sky.jpg";
+import chair from "$lib/assets/dithered/chair.jpg";
+import clouds from "$lib/assets/dithered/flower-bee.jpg";
+import gardenSunset from "$lib/assets/dithered/garden-sunset.jpg";
+import meadowGrass from "$lib/assets/dithered/meadow-grass.jpg";
+import portrait from "$lib/assets/dithered/portrait.jpg";
+import sky from "$lib/assets/dithered/sky.jpg";
 import BreakSection from "$lib/break-section.svelte";
 import Footer from "$lib/footer.svelte";
 import Header from "$lib/header.svelte";
@@ -19,12 +20,12 @@ import TextPatch from "$lib/text-patch.svelte";
 	<ImagePatch position="left">
 		{#snippet outer()}
 			<!-- add in alt description - describe the different plants in the image -->
-			<img alt="" src={gardenCloseup} />
+			<img src={chair} alt="" />
 		{/snippet}
 		{#snippet inner()}
 			<img
-				alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
 				src={portrait}
+				alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
 			/>
 		{/snippet}
 	</ImagePatch>
@@ -63,7 +64,7 @@ import TextPatch from "$lib/text-patch.svelte";
 	</TextPatch>
 </section>
 
-<BreakSection src={meadowGrass} />
+<BreakSection src={clouds} />
 
 <section id="what">
 	<h2>Gardening services tailored to <span>you</span></h2>
@@ -108,11 +109,11 @@ import TextPatch from "$lib/text-patch.svelte";
 	<ImagePatch position="right">
 		{#snippet outer()}
 			<!-- add in alt description -->
-			<img alt="" src={sky} />
+			<img src={gardenSunset} alt="" />
 		{/snippet}
 		{#snippet inner()}
 			<!-- add in alt description -->
-			<img alt="" src={flowerBee} />
+			<img src={sky} alt="" />
 		{/snippet}
 	</ImagePatch>
 
