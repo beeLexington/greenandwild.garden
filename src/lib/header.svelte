@@ -1,5 +1,5 @@
 <script>
-import meadowGrass from "$lib/assets/meadow-grass.jpg";
+import meadowGrass from "$lib/assets/dithered/meadow-grass.jpg";
 import Logo from "$lib/logo.svelte";
 </script>
 
@@ -60,7 +60,6 @@ import Logo from "$lib/logo.svelte";
 		background-image: var(--background-image-src);
 		background-size: cover;
 		background-position: bottom;
-		filter: var(--image-filter);
 	}
 
 	@media (min-width: 600px) {

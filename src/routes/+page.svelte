@@ -1,5 +1,5 @@
 <script>
-import meadowGrass from "$lib/assets/meadow-grass.jpg?enhanced";
+import meadowGrass from "$lib/assets/dithered/meadow-grass.jpg?enhanced";
 import BreakSection from "$lib/break-section.svelte";
 import Footer from "$lib/footer.svelte";
 import Header from "$lib/header.svelte";
@@ -15,11 +15,11 @@ import TextPatch from "$lib/text-patch.svelte";
 	<ImagePatch position="left">
 		{#snippet outer()}
 			<!-- add in alt description - describe the different plants in the image -->
-			<enhanced:img src="$lib/assets/garden-closeup.jpg" alt="" />
+			<enhanced:img src="$lib/assets/dithered/garden-closeup.jpg" alt="" />
 		{/snippet}
 		{#snippet inner()}
 			<enhanced:img
-				src="$lib/assets/portrait.jpg"
+				src="$lib/assets/dithered/portrait.jpg"
 				alt="I am sitting in a stone arch window. I have my hands pressed gently on the stone on either side with my mid length hair covering my face. Through the window you can see lush green foliage."
 			/>
 		{/snippet}
@@ -104,11 +104,11 @@ import TextPatch from "$lib/text-patch.svelte";
 	<ImagePatch position="right">
 		{#snippet outer()}
 			<!-- add in alt description -->
-			<enhanced:img src="$lib/assets/sky.jpg" alt="" />
+			<enhanced:img src="$lib/assets/dithered/sky.jpg" alt="" />
 		{/snippet}
 		{#snippet inner()}
 			<!-- add in alt description -->
-			<enhanced:img src="$lib/assets/flower-bee.jpg" alt="" />
+			<enhanced:img src="$lib/assets/dithered/flower-bee.jpg" alt="" />
 		{/snippet}
 	</ImagePatch>
 

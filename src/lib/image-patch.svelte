@@ -90,6 +90,7 @@ let { position = "left", outer, inner } = $props();
 	}
 
 	.image-patch :global(img) {
+		width: 100%;
 		height: auto;
 		display: block;
 	}

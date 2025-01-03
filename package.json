@@ -2,9 +2,10 @@
 	"name": "myapp",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
+		"dev": "npm run dither && vite dev",
+		"build": "npm run dither && vite build",
+		"preview": "vite preview",
+		"dither": "node scripts/dither.js 'raw-assets/*'"
 	},
 	"files": ["dist", "!dist/**/*.test.*", "!dist/**/*.spec.*"],
 	"devDependencies": {
@@ -13,7 +14,9 @@
 		"@sveltejs/enhanced-img": "^0.4.4",
 		"@sveltejs/kit": "^2.15.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"glob": "^11.0.0",
 		"normalize.css": "^8.0.1",
+		"sharp": "^0.33.5",
 		"svelte": "^5.16.0",
 		"typescript": "^5.7.2",
 		"vite": "^6.0.6"
