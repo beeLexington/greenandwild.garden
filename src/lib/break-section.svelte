@@ -1,5 +1,11 @@
 <script>
-export let src;
+/**
+ * @typedef {Object} Props
+ * @property {string} src
+ */
+
+/** @type {Props} */
+let { src } = $props();
 </script>
 
 <section>
