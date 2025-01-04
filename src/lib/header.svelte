@@ -1,9 +1,9 @@
 <script>
-import meadowGrass from "$lib/assets/meadow-grass.jpg";
+import treeCanopy from "$lib/assets/dithered/tree-canopy.jpg";
 import Logo from "$lib/logo.svelte";
 </script>
 
-<header style="--background-image-src: url({meadowGrass});">
+<header style="--background-image-src: url({treeCanopy});">
 	<div>
 		<Logo />
 		<div><span>Low impact gardening services</span></div>
@@ -59,8 +59,7 @@ import Logo from "$lib/logo.svelte";
 
 		background-image: var(--background-image-src);
 		background-size: cover;
-		background-position: bottom;
-		filter: var(--image-filter);
+		background-position: 80% 70%;
 	}
 
 	@media (min-width: 600px) {
@@ -230,12 +229,18 @@ import Logo from "$lib/logo.svelte";
 			top: 47.5svh;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			color: rgb(var(--colour-white));
+		}
+
+		50% {
+			color: rgb(var(--colour-accent));
 		}
 
 		to {
 			top: 1rem;
 			left: 1.5rem;
 			transform: translate(0, 0);
+			color: rgb(var(--colour-black));
 		}
 	}
 
@@ -245,12 +250,18 @@ import Logo from "$lib/logo.svelte";
 			top: calc(47.5svh + 7rem / 2 - 1rem + 1rem);
 			right: 50%;
 			transform: translate(50%, -50%);
+			color: rgb(var(--colour-white));
+		}
+
+		50% {
+			color: rgb(var(--colour-accent));
 		}
 
 		to {
 			top: calc(7rem / 2);
 			right: 1.5rem;
 			transform: translate(0, -50%);
+			color: rgb(var(--colour-black));
 		}
 	}
 </style>

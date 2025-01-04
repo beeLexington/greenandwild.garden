@@ -34,8 +34,6 @@
 	--logo-amp-font-weight: 600;
 	--logo-amp-font-optical-sizing: auto;
 	--logo-amp-font-style: normal;
-
-	--image-filter: sepia(20%) grayscale(20%) contrast(90%) brightness(110%);
 }
 
 * {
@@ -101,5 +99,4 @@ a:focus {
 
 img {
 	max-width: 100%;
-	filter: var(--image-filter);
 }
