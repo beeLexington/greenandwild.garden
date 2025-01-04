@@ -1,5 +1,5 @@
 <script>
-import meadowGrass from "$lib/assets/dithered/meadow-grass.jpg";
+import meadowGrass from "$lib/assets/dithered/IMG_3862.jpg";
 import Logo from "$lib/logo.svelte";
 </script>
 
@@ -16,6 +16,7 @@ import Logo from "$lib/logo.svelte";
 		height: 95vh;
 		height: 95svh;
 		padding: 1rem 1.5rem;
+		color: rgb(var(--colour-white));
 		background-color: rgb(var(--colour-accent));
 		white-space: nowrap;
 	}
@@ -59,7 +60,7 @@ import Logo from "$lib/logo.svelte";
 
 		background-image: var(--background-image-src);
 		background-size: cover;
-		background-position: bottom;
+		background-position: 80% 70%;
 	}
 
 	@media (min-width: 600px) {

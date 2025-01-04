@@ -52,40 +52,40 @@ let { position = "left", outer, inner } = $props();
 	@media (min-width: 600px) {
 		.image-patch.left > :nth-child(1) {
 			grid-row: 1 / 4;
-			grid-column: 1 / 13;
+			grid-column: 1 / 12;
 		}
 
 		.image-patch.left > :nth-child(2) {
 			grid-row: 2 / 3;
-			grid-column: 15 / 19;
+			grid-column: 14 / 20;
 		}
 
 		.image-patch.right > :nth-child(1) {
 			grid-row: 1 / 4;
-			grid-column: 13 / 25;
+			grid-column: 14 / 25;
 		}
 
 		.image-patch.right > :nth-child(2) {
 			grid-row: 2 / 3;
-			grid-column: 7 / 11;
+			grid-column: 6 / 12;
 		}
 	}
 
 	@media (min-width: 900px) {
 		.image-patch.left > :nth-child(1) {
-			grid-column: 1 / 11;
+			grid-column: 1 / 10;
 		}
 
 		.image-patch.left > :nth-child(2) {
-			grid-column: 13 / 16;
+			grid-column: 12 / 17;
 		}
 
 		.image-patch.right > :nth-child(1) {
-			grid-column: 15 / 25;
+			grid-column: 16 / 25;
 		}
 
 		.image-patch.right > :nth-child(2) {
-			grid-column: 10 / 13;
+			grid-column: 9 / 14;
 		}
 	}
 
