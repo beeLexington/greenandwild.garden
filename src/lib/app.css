@@ -109,6 +109,12 @@ a:focus {
 	outline: none;
 }
 
+a[href^="http:"]::after,
+a[href^="https:"]::after {
+	content: " ↗";
+	font-size: 0.8em;
+}
+
 img {
 	max-width: 100%;
 }
