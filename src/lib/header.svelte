@@ -49,6 +49,7 @@ import Logo from "$lib/logo.svelte";
 	header > div > :last-child {
 		position: absolute;
 		color: rgb(var(--colour-white));
+		text-shadow: 0 0 0.3rem rgb(var(--colour-black));
 	}
 
 	header > div > :global(:first-child) {
@@ -139,10 +140,12 @@ import Logo from "$lib/logo.svelte";
 						left: 50%;
 						transform: translate(-50%, -50%);
 						color: rgb(var(--colour-white));
+						text-shadow: 0 0 0.3rem rgb(var(--colour-black));
 					}
 
 					50% {
 						color: rgb(var(--colour-accent));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
 					}
 
 					to {
@@ -150,6 +153,7 @@ import Logo from "$lib/logo.svelte";
 						left: 1.5rem;
 						transform: translate(0, 0);
 						color: rgb(var(--colour-black));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
 					}
 				}
 
@@ -160,10 +164,12 @@ import Logo from "$lib/logo.svelte";
 						right: 50%;
 						transform: translate(50%, -50%);
 						color: rgb(var(--colour-white));
+						text-shadow: 0 0 0.3rem rgb(var(--colour-black));
 					}
 
 					50% {
 						color: rgb(var(--colour-accent));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
 					}
 
 					to {
@@ -171,6 +177,7 @@ import Logo from "$lib/logo.svelte";
 						right: 1.5rem;
 						transform: translate(0, -50%);
 						color: rgb(var(--colour-black));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
 					}
 				}
 			}
