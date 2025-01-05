@@ -193,6 +193,7 @@ import TextPatch from "$lib/text-patch.svelte";
 
 <style>
 	section {
+		scroll-margin-block-start: 4em;
 		padding-block: 6rem;
 		display: grid;
 		grid-template-columns: 1rem repeat(22, 1fr) 1rem;
