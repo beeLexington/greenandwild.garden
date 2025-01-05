@@ -41,6 +41,8 @@
 }
 
 html {
+	overscroll-behavior: none;
+
 	font-size: 16px;
 	background-color: rgb(var(--colour-white));
 	color: rgb(var(--colour-black));
