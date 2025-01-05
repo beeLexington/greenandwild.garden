@@ -18,15 +18,6 @@
 
 	h1 > :nth-child(1) {
 		margin-block-start: 0.1em;
-
-		animation-name: fade-in;
-	}
-
-	@media (prefers-reduced-motion) {
-		h1 > :nth-child(1) {
-			animation-name: unset;
-			opacity: 1;
-		}
 	}
 
 	h1 > :nth-child(2) {
@@ -35,58 +26,54 @@
 		font-weight: var(--logo-amp-font-weight);
 		font-style: var(--logo-amp-font-style);
 		font-size: 2em;
-
-		animation-name: shrink;
-	}
-
-	@media (prefers-reduced-motion) {
-		h1 > :nth-child(2) {
-			animation-name: unset;
-			transform: scale(1);
-		}
 	}
 
 	h1 > :nth-child(3) {
 		align-self: flex-end;
 		margin-inline-start: 0.1em;
 		margin-block-end: 0.1em;
-
-		animation-name: fade-in;
 	}
 
-	@media (prefers-reduced-motion) {
+	@media not (prefers-reduced-motion) {
+		h1 > :nth-child(1) {
+			animation-name: fade-in;
+		}
+
+		h1 > :nth-child(2) {
+			animation-name: shrink;
+		}
+
 		h1 > :nth-child(3) {
-			animation-name: unset;
-			opacity: 1;
-		}
-	}
-
-	h1 > :nth-child(1),
-	h1 > :nth-child(2),
-	h1 > :nth-child(3) {
-		animation-fill-mode: both;
-		animation-delay: 0.5s;
-		animation-duration: 3s;
-		animation-timing-function: ease-in-out;
-	}
-
-	@keyframes shrink {
-		from {
-			transform: scale(1.5);
+			animation-name: fade-in;
 		}
 
-		to {
-			transform: scale(1);
+		h1 > :nth-child(1),
+		h1 > :nth-child(2),
+		h1 > :nth-child(3) {
+			animation-fill-mode: both;
+			animation-delay: 0.5s;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
 		}
-	}
 
-	@keyframes fade-in {
-		from {
-			opacity: 0;
+		@keyframes fade-in {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
 		}
 
-		to {
-			opacity: 1;
+		@keyframes shrink {
+			from {
+				transform: scale(1.5);
+			}
+
+			to {
+				transform: scale(1);
+			}
 		}
 	}
 </style>
