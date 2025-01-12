@@ -2,7 +2,7 @@
 import "normalize.css";
 
 import "$lib/app.css";
-import Footer from "$lib/footer.svelte";
+import Header from "$lib/header.svelte";
 
 /**
  * @typedef {Object} Props
@@ -13,6 +13,7 @@ import Footer from "$lib/footer.svelte";
 let { children } = $props();
 </script>
 
-{@render children()}
+<!-- keep header static in the green banner form - remove the animation -->
+<Header />
 
-<Footer />
+{@render children()}
