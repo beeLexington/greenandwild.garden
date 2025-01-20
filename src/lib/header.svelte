@@ -20,34 +20,6 @@ import Logo from "$lib/logo.svelte";
 		white-space: nowrap;
 	}
 
-	@media (min-width: 600px) {
-		header {
-			position: sticky;
-			top: 0;
-			z-index: 1;
-			height: unset;
-
-			animation-name: shrink;
-		}
-
-		@media (prefers-reduced-motion) {
-			header {
-				animation-name: unset;
-				height: 7rem;
-			}
-		}
-	}
-
-	header,
-	header::before,
-	header > div > :global(:first-child),
-	header > div > :last-child {
-		animation-fill-mode: both;
-		animation-delay: 5s;
-		animation-duration: 2s;
-		animation-timing-function: ease-in-out;
-	}
-
 	header::before {
 		content: "";
 
@@ -60,19 +32,6 @@ import Logo from "$lib/logo.svelte";
 		background-image: var(--background-image-src);
 		background-size: cover;
 		background-position: 80% 70%;
-	}
-
-	@media (min-width: 600px) {
-		header::before {
-			animation-name: fade-out;
-		}
-
-		@media (prefers-reduced-motion) {
-			header::before {
-				animation-name: unset;
-				opacity: 0;
-			}
-		}
 	}
 
 	header > div {
@@ -89,13 +48,8 @@ import Logo from "$lib/logo.svelte";
 	header > div > :global(:first-child),
 	header > div > :last-child {
 		position: absolute;
-	}
-
-	@media (min-width: 600px) {
-		header > div > :global(:first-child),
-		header > div > :last-child {
-			position: fixed;
-		}
+		color: rgb(var(--colour-white));
+		text-shadow: 0 0 0.3rem rgb(var(--colour-black));
 	}
 
 	header > div > :global(:first-child) {
@@ -105,25 +59,6 @@ import Logo from "$lib/logo.svelte";
 		transform: translate(-50%, -50%);
 	}
 
-	@media (min-width: 600px) {
-		header > div > :global(:first-child) {
-			top: unset;
-			left: unset;
-			transform: unset;
-
-			animation-name: move-logo-to-position;
-		}
-
-		@media (prefers-reduced-motion) {
-			header > div > :global(:first-child) {
-				animation-name: unset;
-				top: 1rem;
-				left: 1.5rem;
-				transform: translate(0, 0);
-			}
-		}
-	}
-
 	header > div > :last-child {
 		top: calc(47.5vh + 7rem / 2 - 1rem + 1rem);
 		top: calc(47.5svh + 7rem / 2 - 1rem + 1rem);
@@ -131,137 +66,121 @@ import Logo from "$lib/logo.svelte";
 		transform: translate(50%, -50%);
 	}
 
-	@media (min-width: 600px) {
-		header > div > :last-child {
-			top: unset;
-			right: unset;
-			transform: unset;
-
-			animation-name: move-tagline-to-position;
-		}
-
-		@media (prefers-reduced-motion) {
-			header > div > :last-child {
-				animation-name: unset;
-				top: calc(7rem / 2);
-				right: 1.5rem;
-				transform: translate(0, -50%);
-			}
-		}
-	}
-
-	header > div > :last-child > span {
-		animation-name: fade-in;
-		animation-fill-mode: both;
-		animation-delay: 3s;
-		animation-duration: 2.5s;
-		animation-timing-function: ease-in-out;
-	}
-
-	@media (prefers-reduced-motion) {
+	@media not (prefers-reduced-motion) {
 		header > div > :last-child > span {
-			animation-name: unset;
-			opacity: 1;
+			animation-name: fade-in;
+			animation-fill-mode: both;
+			animation-delay: 1s;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
 		}
-	}
 
-	@supports (animation-timeline: scroll()) and (animation-range: cover) {
-		@media (min-width: 600px) {
-			header {
-				top: calc(-95vh + 7rem);
-				top: calc(-95svh + 7rem);
-				animation-play-state: paused;
+		@keyframes fade-in {
+			from {
+				opacity: 0;
 			}
 
-			@media (prefers-reduced-motion) {
+			to {
+				opacity: 1;
+			}
+		}
+
+		@media (min-width: 600px) {
+			@supports (animation-timeline: scroll()) and (animation-range: cover) {
 				header {
-					top: 0;
+					position: sticky;
+					top: calc(-95vh + 7rem);
+					top: calc(-95svh + 7rem);
+					z-index: 1;
+					height: 95vh;
+					height: 95svh;
+				}
+
+				header::before {
+					animation-name: fade-out;
+				}
+
+				header::before,
+				header > div > :global(:first-child),
+				header > div > :last-child {
+					animation-timeline: scroll();
+					animation-range: 0 calc(95vh - 7rem);
+					animation-range: 0 calc(95svh - 7rem);
+					animation-fill-mode: both;
+					animation-timing-function: linear;
+				}
+
+				header > div > :global(:first-child),
+				header > div > :last-child {
+					position: fixed;
+				}
+
+				header > div > :global(:first-child) {
+					animation-name: move-logo-to-position;
+				}
+
+				header > div > :last-child {
+					animation-name: move-tagline-to-position;
+				}
+
+				@keyframes fade-out {
+					from {
+						opacity: 1;
+					}
+
+					to {
+						opacity: 0;
+					}
+				}
+
+				@keyframes move-logo-to-position {
+					from {
+						top: 47.5vh;
+						top: 47.5svh;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						color: rgb(var(--colour-white));
+						text-shadow: 0 0 0.3rem rgb(var(--colour-black));
+					}
+
+					50% {
+						color: rgb(var(--colour-accent));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
+					}
+
+					to {
+						top: 1rem;
+						left: 1.5rem;
+						transform: translate(0, 0);
+						color: rgb(var(--colour-black));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
+					}
+				}
+
+				@keyframes move-tagline-to-position {
+					from {
+						top: calc(47.5vh + 7rem / 2 - 1rem + 1rem);
+						top: calc(47.5svh + 7rem / 2 - 1rem + 1rem);
+						right: 50%;
+						transform: translate(50%, -50%);
+						color: rgb(var(--colour-white));
+						text-shadow: 0 0 0.3rem rgb(var(--colour-black));
+					}
+
+					50% {
+						color: rgb(var(--colour-accent));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
+					}
+
+					to {
+						top: calc(7rem / 2);
+						right: 1.5rem;
+						transform: translate(0, -50%);
+						color: rgb(var(--colour-black));
+						text-shadow: 0 0 0 rgb(var(--colour-black));
+					}
 				}
 			}
-		}
-
-		header::before,
-		header > div > :global(:first-child),
-		header > div > :last-child {
-			animation-delay: unset;
-			animation-duration: unset;
-			animation-timeline: scroll();
-			animation-range: 0 calc(95vh - 7rem);
-			animation-range: 0 calc(95svh - 7rem);
-			animation-timing-function: linear;
-		}
-	}
-
-	@keyframes shrink {
-		from {
-			height: 95vh;
-			height: 95svh;
-		}
-
-		to {
-			height: 7rem;
-		}
-	}
-
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes fade-out {
-		from {
-			opacity: 1;
-		}
-
-		to {
-			opacity: 0;
-		}
-	}
-
-	@keyframes move-logo-to-position {
-		from {
-			top: 47.5vh;
-			top: 47.5svh;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: rgb(var(--colour-white));
-		}
-
-		50% {
-			color: rgb(var(--colour-accent));
-		}
-
-		to {
-			top: 1rem;
-			left: 1.5rem;
-			transform: translate(0, 0);
-			color: rgb(var(--colour-black));
-		}
-	}
-
-	@keyframes move-tagline-to-position {
-		from {
-			top: calc(47.5vh + 7rem / 2 - 1rem + 1rem);
-			top: calc(47.5svh + 7rem / 2 - 1rem + 1rem);
-			right: 50%;
-			transform: translate(50%, -50%);
-			color: rgb(var(--colour-white));
-		}
-
-		50% {
-			color: rgb(var(--colour-accent));
-		}
-
-		to {
-			top: calc(7rem / 2);
-			right: 1.5rem;
-			transform: translate(0, -50%);
-			color: rgb(var(--colour-black));
 		}
 	}
 </style>
