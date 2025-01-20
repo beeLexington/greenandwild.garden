@@ -12,7 +12,7 @@ import ImagePatch from "$lib/image-patch.svelte";
 import TextPatch from "$lib/text-patch.svelte";
 </script>
 
-<Header />
+<Header animate logoTag="h1" />
 
 <section id="who">
 	<h2>More than just your basic <span>gardener</span></h2>

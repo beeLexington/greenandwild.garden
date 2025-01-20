@@ -1,11 +1,25 @@
 <script>
 import treeCanopy from "$lib/assets/dithered/tree-canopy.jpg";
 import Logo from "$lib/logo.svelte";
+
+/**
+ * @typedef {Object} Props
+ * @property {boolean} [animate]
+ * @property {string} [logoTag]
+ */
+
+/** @type {Props} */
+let { animate = false, logoTag = "div" } = $props();
 </script>
 
-<header style="--background-image-src: url({treeCanopy});">
+<header
+	class={animate ? "animated" : undefined}
+	style="--background-image-src: url({treeCanopy});"
+>
 	<div>
-		<Logo />
+		<a href="/">
+			<Logo {animate} tag={logoTag} />
+		</a>
 		<div><span>Low impact gardening services</span></div>
 	</div>
 </header>
@@ -45,6 +59,10 @@ import Logo from "$lib/logo.svelte";
 		line-height: var(--heading-line-height);
 	}
 
+	header > div > a {
+		text-decoration: none;
+	}
+
 	header > div > :global(:first-child),
 	header > div > :last-child {
 		position: absolute;
@@ -67,7 +85,7 @@ import Logo from "$lib/logo.svelte";
 	}
 
 	@media not (prefers-reduced-motion) {
-		header > div > :last-child > span {
+		header.animated > div > :last-child > span {
 			animation-name: fade-in;
 			animation-fill-mode: both;
 			animation-delay: 1s;
@@ -84,10 +102,44 @@ import Logo from "$lib/logo.svelte";
 				opacity: 1;
 			}
 		}
+	}
 
-		@media (min-width: 600px) {
+	@media (min-width: 600px) {
+		header:not(.animated) {
+			position: sticky;
+			top: 0;
+			z-index: 1;
+			height: 7rem;
+		}
+
+		header:not(.animated)::before {
+			opacity: 0;
+		}
+
+		header:not(.animated) > div > :global(:first-child),
+		header:not(.animated) > div > :last-child {
+			position: fixed;
+		}
+
+		header:not(.animated) > div > :global(:first-child) {
+			top: 1rem;
+			left: 1.5rem;
+			transform: translate(0, 0);
+			color: rgb(var(--colour-black));
+			text-shadow: 0 0 0 rgb(var(--colour-black));
+		}
+
+		header:not(.animated) > div > :last-child {
+			top: calc(7rem / 2);
+			right: 1.5rem;
+			transform: translate(0, -50%);
+			color: rgb(var(--colour-black));
+			text-shadow: 0 0 0 rgb(var(--colour-black));
+		}
+
+		@media not (prefers-reduced-motion) {
 			@supports (animation-timeline: scroll()) and (animation-range: cover) {
-				header {
+				header.animated {
 					position: sticky;
 					top: calc(-95vh + 7rem);
 					top: calc(-95svh + 7rem);
@@ -96,13 +148,13 @@ import Logo from "$lib/logo.svelte";
 					height: 95svh;
 				}
 
-				header::before {
+				header.animated::before {
 					animation-name: fade-out;
 				}
 
-				header::before,
-				header > div > :global(:first-child),
-				header > div > :last-child {
+				header.animated::before,
+				header.animated > div > :global(:first-child),
+				header.animated > div > :last-child {
 					animation-timeline: scroll();
 					animation-range: 0 calc(95vh - 7rem);
 					animation-range: 0 calc(95svh - 7rem);
@@ -110,16 +162,16 @@ import Logo from "$lib/logo.svelte";
 					animation-timing-function: linear;
 				}
 
-				header > div > :global(:first-child),
-				header > div > :last-child {
+				header.animated > div > :global(:first-child),
+				header.animated > div > :last-child {
 					position: fixed;
 				}
 
-				header > div > :global(:first-child) {
+				header.animated > div > :global(:first-child) {
 					animation-name: move-logo-to-position;
 				}
 
-				header > div > :last-child {
+				header.animated > div > :last-child {
 					animation-name: move-tagline-to-position;
 				}
 

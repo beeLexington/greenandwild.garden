@@ -1,11 +1,22 @@
-<h1>
+<script>
+/**
+ * @typedef {Object} Props
+ * @property {boolean} [animate]
+ * @property {string} tag
+ */
+
+/** @type {Props} */
+let { animate = false, tag } = $props();
+</script>
+
+<svelte:element this={tag} class="logo{animate ? ' animated' : ''}">
 	<span>Green</span>
 	<span>&</span>
 	<span>Wild</span>
-</h1>
+</svelte:element>
 
 <style>
-	h1 {
+	.logo {
 		margin-block: 0;
 		font-family: var(--logo-text-font-family);
 		font-optical-sizing: var(--logo-text-font-optical-sizing);
@@ -16,11 +27,11 @@
 		display: flex;
 	}
 
-	h1 > :nth-child(1) {
+	.logo > :nth-child(1) {
 		margin-block-start: 0.1em;
 	}
 
-	h1 > :nth-child(2) {
+	.logo > :nth-child(2) {
 		font-family: var(--logo-amp-font-family);
 		font-optical-sizing: var(--logo-amp-font-optical-sizing);
 		font-weight: var(--logo-amp-font-weight);
@@ -28,28 +39,28 @@
 		font-size: 2em;
 	}
 
-	h1 > :nth-child(3) {
+	.logo > :nth-child(3) {
 		align-self: flex-end;
 		margin-inline-start: 0.1em;
 		margin-block-end: 0.1em;
 	}
 
 	@media not (prefers-reduced-motion) {
-		h1 > :nth-child(1) {
+		.logo.animated > :nth-child(1) {
 			animation-name: fade-in;
 		}
 
-		h1 > :nth-child(2) {
+		.logo.animated > :nth-child(2) {
 			animation-name: shrink;
 		}
 
-		h1 > :nth-child(3) {
+		.logo.animated > :nth-child(3) {
 			animation-name: fade-in;
 		}
 
-		h1 > :nth-child(1),
-		h1 > :nth-child(2),
-		h1 > :nth-child(3) {
+		.logo.animated > :nth-child(1),
+		.logo.animated > :nth-child(2),
+		.logo.animated > :nth-child(3) {
 			animation-fill-mode: both;
 			animation-delay: 0.5s;
 			animation-duration: 1s;
