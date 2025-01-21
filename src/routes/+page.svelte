@@ -95,9 +95,10 @@ import TextPatch from "$lib/text-patch.svelte";
 		<p>
 			If you have a job to do in your garden and you're not sure if I'm the
 			right person for you, or if you have any needs or concerns about how I
-			might work in your space, please <a href="#contact">contact me</a>. I'm
-			always happy to answer any questions and work with you to accommodate any
-			specific requirements you might have.
+			might work in your space or how much it might cost, please <a
+				href="#contact">contact me</a
+			>. I'm always happy to answer any questions and work with you to
+			accommodate any specific requirements you might have.
 		</p>
 	</TextPatch>
 </section>
