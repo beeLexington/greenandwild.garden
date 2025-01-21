@@ -4,9 +4,6 @@
 			<li>
 				<a href="/privacy">Privacy policy</a>
 			</li>
-			<li>
-				<a href="/terms">Terms and conditions</a>
-			</li>
 		</ul>
 		<p>Copyright © 2025 Green and Wild. All Rights Reserved</p>
 	</div>
