@@ -6,13 +6,12 @@ import meadowGrass from "$lib/assets/dithered/meadow-grass.jpg";
 import portrait from "$lib/assets/dithered/portrait.jpg";
 import sky from "$lib/assets/dithered/sky.jpg";
 import BreakSection from "$lib/break-section.svelte";
-import Footer from "$lib/footer.svelte";
 import Header from "$lib/header.svelte";
 import ImagePatch from "$lib/image-patch.svelte";
 import TextPatch from "$lib/text-patch.svelte";
 </script>
 
-<Header />
+<Header animate logoTag="h1" />
 
 <section id="who">
 	<h2>More than just your basic <span>gardener</span></h2>
@@ -188,8 +187,6 @@ import TextPatch from "$lib/text-patch.svelte";
 		></iframe>
 	</TextPatch>
 </section>
-
-<Footer />
 
 <style>
 	section {
