@@ -176,16 +176,17 @@ import TextPatch from "$lib/text-patch.svelte";
 		<p>
 			You can email me at <a href="mailto:greenandwild@proton.me"
 				>greenandwild@proton.me</a
-			> or fill in the contact form below.
+			>
 		</p>
 
-		<iframe
+		<!-- find an alternative to using the airtable contact form -->
+		<!-- <iframe
 			title="Contact me"
 			class="airtable-embed"
 			src="https://airtable.com/embed/appXJNuU4f3XjYZZT/pagSWkN81JdVAC0r4/form"
 			frameborder="0"
 			onmousewheel={() => {}}
-		></iframe>
+		></iframe> -->
 	</TextPatch>
 </section>
 
@@ -246,15 +247,15 @@ import TextPatch from "$lib/text-patch.svelte";
 		margin-block-end: 0;
 	}
 
-	iframe {
+	/* iframe {
 		width: 100%;
 		height: calc(598px + 147px);
 		background: rgb(255, 255, 255);
-	}
+	} */
 
 	@media (min-width: 900px) {
-		iframe {
+		/* iframe {
 			height: calc(584px + 147px);
-		}
+		} */
 	}
 </style>
