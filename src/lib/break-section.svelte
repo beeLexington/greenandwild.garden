@@ -1,15 +1,16 @@
 <script>
 /**
  * @typedef {Object} Props
+ * @property {string} alt
  * @property {string} src
  */
 
 /** @type {Props} */
-let { src } = $props();
+let { alt, src } = $props();
 </script>
 
 <section>
-	<img {src} display="presentation" alt="" />
+	<img {src} {alt} />
 </section>
 
 <style>
