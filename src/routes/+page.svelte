@@ -1,6 +1,6 @@
 <script>
 import chair from "$lib/assets/dithered/chair.jpg";
-import clouds from "$lib/assets/dithered/flower-bee.jpg";
+import flowerBee from "$lib/assets/dithered/flower-bee.jpg";
 import gardenSunset from "$lib/assets/dithered/garden-sunset.jpg";
 import meadowGrass from "$lib/assets/dithered/meadow-grass.jpg";
 import portrait from "$lib/assets/dithered/portrait.jpg";
@@ -18,8 +18,10 @@ import TextPatch from "$lib/text-patch.svelte";
 
 	<ImagePatch position="left">
 		{#snippet outer()}
-			<!-- add in alt description - describe the different plants in the image -->
-			<img src={chair} alt="" />
+			<img
+				src={chair}
+				alt="A wooden garden chair is positioned within the shade of walled paved area. There are pots and plants surrounding it."
+			/>
 		{/snippet}
 		{#snippet inner()}
 			<img
@@ -63,7 +65,10 @@ import TextPatch from "$lib/text-patch.svelte";
 	</TextPatch>
 </section>
 
-<BreakSection src={clouds} />
+<BreakSection
+	src={flowerBee}
+	alt="A close up of a bumblebee perched on top of a pink flower head with green foliage in the background."
+/>
 
 <section id="what">
 	<h2>Gardening services tailored to <span>you</span></h2>
@@ -108,12 +113,10 @@ import TextPatch from "$lib/text-patch.svelte";
 
 	<ImagePatch position="right">
 		{#snippet outer()}
-			<!-- add in alt description -->
-			<img src={gardenSunset} alt="" />
+			<img src={gardenSunset} alt="A view down a garden at dusk." />
 		{/snippet}
 		{#snippet inner()}
-			<!-- add in alt description -->
-			<img src={sky} alt="" />
+			<img src={sky} alt="Blue sky with white fluffy clouds." />
 		{/snippet}
 	</ImagePatch>
 
@@ -167,7 +170,10 @@ import TextPatch from "$lib/text-patch.svelte";
 	</TextPatch>
 </section>
 
-<BreakSection src={meadowGrass} />
+<BreakSection
+	src={meadowGrass}
+	alt="View of a grass meadow with a single grass flower head focused with the rest of the background out of focus."
+/>
 
 <section id="contact">
 	<h2>How to <span>get in touch</span></h2>
