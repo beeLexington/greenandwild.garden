@@ -9,6 +9,7 @@ import BreakSection from "$lib/break-section.svelte";
 import Header from "$lib/header.svelte";
 import ImagePatch from "$lib/image-patch.svelte";
 import TextPatch from "$lib/text-patch.svelte";
+import ContactForm from "$lib/contact-form.svelte";
 </script>
 
 <Header animate logoTag="h1" />
@@ -185,13 +186,7 @@ import TextPatch from "$lib/text-patch.svelte";
 			> or fill in the contact form below.
 		</p>
 
-		<iframe
-			title="Contact me"
-			class="airtable-embed"
-			src="https://airtable.com/embed/appXJNuU4f3XjYZZT/pagSWkN81JdVAC0r4/form"
-			frameborder="0"
-			onmousewheel={() => {}}
-		></iframe>
+		<ContactForm />
 	</TextPatch>
 </section>
 
@@ -250,17 +245,5 @@ import TextPatch from "$lib/text-patch.svelte";
 
 	ul > li:last-child {
 		margin-block-end: 0;
-	}
-
-	iframe {
-		width: 100%;
-		height: calc(598px + 147px);
-		background: rgb(255, 255, 255);
-	}
-
-	@media (min-width: 900px) {
-		iframe {
-			height: calc(584px + 147px);
-		}
 	}
 </style>
