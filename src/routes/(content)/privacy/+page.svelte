@@ -28,7 +28,7 @@
 	<p>Policy effective from: <strong>21st January 2025</strong></p>
 	<p>Last updated: <strong>21st January 2025</strong></p>
 	<p>
-		This Privacy Policy describes Green and Wild’s policies and procedures on
+		This Privacy Policy describes Green & Wild’s policies and procedures on
 		the collection, use, and disclosure of your information when you use
 		this website and all my services. It tells you about your privacy rights
 		and how the law protects you.
@@ -41,7 +41,7 @@
 	<h3>Personal information you provide me</h3>
 	<p>
 		I will only obtain any of your personal information if you contact me.
-		By submitting a contact form or contacting Green and Wild by any means,
+		By submitting a contact form or contacting Green & Wild by any means,
 		you consent to the collection and use of your information under the
 		terms of this privacy policy.
 	</p>
