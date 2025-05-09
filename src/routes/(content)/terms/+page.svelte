@@ -19,7 +19,8 @@
 </nav>
 
 <section>
-    <p>Last updated: <strong>16th March 2025</strong></p>
+    <p>Terms of Service effective from: <strong>16th March 2025</strong></p>
+    <p>Last updated: <strong>9th May 2025</strong></p>
 </section>
 
 <section id="agreement">
@@ -84,8 +85,12 @@
     <p>
         Unless specifically and explicitly agreed otherwise, I charge for all of
         the time I am on site. This includes all time spent setting up at the
-        beginning of my visit and packing up at the end. I also charge for time
-        spent doing research or making plans for your space while off site.
+        beginning of my visit and packing up at the end.
+    </p>
+    <p>
+        I also charge for time spent doing research or making plans for your
+        space while off site. Any off-site work will be agreed before carrying
+        it out.
     </p>
     <p>
         While I am on site, I will focus entirely on the services I am carrying
@@ -109,7 +114,8 @@
         All materials to be used while working for you must either be provided
         by you or you must reimburse me for any costs associated with acquiring
         them for you, including but not limited to the purchase cost of the
-        materials, VAT, and any shipping and handling fees.
+        materials (such as compost, plants, and plant food), VAT, and any
+        shipping and handling fees.
     </p>
 </section>
 
