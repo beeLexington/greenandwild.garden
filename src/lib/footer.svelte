@@ -5,7 +5,7 @@
 				<a href="/privacy">Privacy policy</a>
 			</li>
 		</ul>
-		<p>Copyright © 2025 Green and Wild. All Rights Reserved</p>
+		<p>Copyright © 2025 Green & Wild. All Rights Reserved</p>
 	</div>
 </footer>
 
