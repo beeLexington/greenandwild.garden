@@ -58,9 +58,10 @@ import TextPatch from "$lib/text-patch.svelte";
 		</p>
 
 		<p>
-			I work in and around Hertfordshire and Bedfordshire and have an RHS Level
-			2 Certificate in Practical Horticulture. If I sound like a good fit for
-			you, <a href="#contact">get in touch</a>.
+			I work in and around North Hertfordshire and have an RHS Level 2
+			Certificate in Practical Horticulture. If I sound like a good fit for you, <a
+				href="#contact">get in touch</a
+			>.
 		</p>
 	</TextPatch>
 </section>
