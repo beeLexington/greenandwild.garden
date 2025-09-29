@@ -53,7 +53,7 @@ import TextPatch from "$lib/text-patch.svelte";
 			gardening more accessible, more affordable, and more inclusive. I want a
 			world where anybody can have an outdoor space where they feel comfortable,
 			and I take great care when thinking about the way I work to try to help
-			achieve that. As a queer trans non-binary person, I understand first hand
+			achieve that. As a queer non-binary trans person, I understand first hand
 			how important this is.
 		</p>
 
