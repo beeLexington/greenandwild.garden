@@ -53,14 +53,14 @@ import TextPatch from "$lib/text-patch.svelte";
 			gardening more accessible, more affordable, and more inclusive. I want a
 			world where anybody can have an outdoor space where they feel comfortable,
 			and I take great care when thinking about the way I work to try to help
-			achieve that. As a queer trans non-binary person, I understand first hand
+			achieve that. As a queer non-binary trans person, I understand first hand
 			how important this is.
 		</p>
 
 		<p>
-			I work in and around Hertfordshire and Bedfordshire and have an RHS Level
-			2 Certificate in Practical Horticulture. If I sound like a good fit for
-			you, <a href="#contact">get in touch</a>.
+			I work in and around North Hertfordshire and have an RHS Level 2
+			Certificate in the Principles and Practices of Horticulture. If I sound
+			like a good fit for you, <a href="#contact">get in touch</a>.
 		</p>
 	</TextPatch>
 </section>
